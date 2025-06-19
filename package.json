@@ -1,0 +1,36 @@
+{
+  "name": "ceeaa",
+  "version": "1.0.0",
+  "main": "contacto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.1"
+  },
+  "customData": [
+    {
+      "icono": "fas fa-bullseye",
+      "titulo": "Meta clara",
+      "descripcion": "Definir objetivos estratégicos de forma precisa."
+    },
+    {
+      "icono": "fas fa-handshake",
+      "titulo": "Colaboración",
+      "descripcion": "Fomentar el trabajo en equipo entre departamentos."
+    },
+    {
+      "icono": "fas fa-lightbulb",
+      "titulo": "Innovación",
+      "descripcion": "Impulsar ideas que mejoren la eficiencia operativa."
+    }
+  ]
+}
+

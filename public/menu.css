@@ -1,0 +1,43 @@
+@media (max-width: 700px) {
+  .navbar-mini-container { height: 54px; border-radius: 0 0 8px 8px; position: relative;}
+  .menu-toggle { display: block; }
+  .nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 54px;
+    left: 0;
+    width: 100vw;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(9, 46, 114, 0.97);
+    backdrop-filter: blur(7px);
+    box-shadow: 0 12px 30px #143c7d33;
+    border-radius: 0 0 20px 20px;
+    transition: max-height 0.4s cubic-bezier(.77,0,.18,1), padding 0.2s;
+    z-index: 20;
+    gap: 0;
+  }
+  .nav-list.open {
+    max-height: 320px;   /* Ajusta alto si agregas más botones */
+    padding: 4px 0 8px;
+  }
+  .nav-list li { width: 100%; }
+  .nav-list li a {
+    width: 100%;
+    padding: 13px 18px;   /* Un poco más alto (más grueso) */
+    font-size: 1.12rem;
+    border-radius: 0;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: background 0.17s, color 0.17s;
+    border-left: 4px solid transparent;
+  }
+  .nav-list li a:hover,
+  .nav-list li a.active {
+    background: #4ad1ff22;
+    color: #4ad1ff;
+    border-left: 4px solid #4ad1ff;
+  }
+}
