@@ -51,7 +51,7 @@
       const lista = document.getElementById('lista-noticias');
       lista.innerHTML = "<p style='color:#222; text-align:center;'>Cargando noticias...</p>";
 
-      fetch('http://localhost:3000/api/noticias')
+      fetch('https://ceeaa-backend.onrender.com/api/noticias')
         .then(res => {
           if (!res.ok) throw new Error('Error de red');
           return res.json();
