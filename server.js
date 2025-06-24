@@ -1,6 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path');
+const path = require('path');app.use(cors({
+  origin: 'https://ally0808.github.io'  // reemplaza con tu GitHub Pages exacto
+}));
+
 
 const Objetivo = require('./models/Objetivo');
 const Comite = require('./models/Comite');

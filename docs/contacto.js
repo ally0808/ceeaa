@@ -16,8 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
       }
 
-      // ✅ Fetch bien estructurado
-      fetch('https://ceeaa-backend.onrender.com/api/contacto', {
+      fetch('/api/contacto', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nombre, email, mensaje })

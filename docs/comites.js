@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById('comites-container');
-  fetch('https://ceeaa-backend.onrender.com/api/comites')
+  fetch('http://localhost:3000/api/comites')
     .then(res => res.json())
     .then(data => {
       container.innerHTML = "";
