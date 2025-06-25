@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const lista = document.getElementById('objetivos-container'); // <-- el mismo que en el HTML
-  fetch('/api/objetivos')
+  fetch('https://ceeaa-backend.onrender.com/api/objetivos')
     .then(res => res.json())
     .then(data => {
       lista.innerHTML = "";
