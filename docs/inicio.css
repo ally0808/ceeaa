@@ -99,7 +99,7 @@ body {
     padding: 0;
     max-height: 0;
     overflow: hidden;
-    background: rgba(9, 46, 114, 0.97);
+    background: #092e72;
     backdrop-filter: blur(7px);
     box-shadow: 0 12px 30px #143c7d33;
     border-radius: 0 0 20px 20px;
