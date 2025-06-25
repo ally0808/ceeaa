@@ -67,7 +67,7 @@ async function seedData() {
       {
         nombre: "Relaciones Institucionales",
         descripcion: "Fomenta alianzas con organismos públicos y privados.",
-        imagen: "https://www.gob.mx/cms/uploads/article/main_image/25755/JITOMATE.jpg"
+        imagen: "https://th.bing.com/th/id/OIP.gkva38ot7-gP7QeGcAIn_AHaE8?rs=1&pid=ImgDetMain&cb=idpwebp2&o=7&rm=3"
       },
       {
         nombre: "Eduación y Talento",
