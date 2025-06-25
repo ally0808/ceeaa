@@ -39,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
       fecha: "11 de Febrero 2025"
     },
     {
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481994085_573081429100432_8289302445105742167_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=I2bAYZXN8AQQ7kNvwG8fcQ2&_nc_oc=AdljDADmEwPP4L01GbRQpO9JM4CHlUaZCm-0a8z5qTacNt0d1hmrNW3nXcpAh34KP83_zrelmGBuUaGjbortUrby&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=A430SCgTeMy0ZgxIZ9IBvg&oh=00_AfNk2F1Ug87bdOjGFFbaPF2-zU20mztqvmcPYlXZud9HWQ&oe=686212EC",
+      titulo: "El Vicepresidente  del Clúster Automotriz GIRAA Mel Wilhem, tomó protesta como parte del Comité Estatal de Educación Dual en Educación Media Superior... ¡Felicidades!.",
+      fecha: "23 de Febrero 2025"
+    },
+    {
       src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/482203547_573092015766040_1871465784854559755_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=j2TXIqo6pUYQ7kNvwEBxpzS&_nc_oc=AdkZaiwZdjZrFrSm84rZXClcWaT9rqyuHcQCx6hi-Kqp_6Va1NVm8eMxyU2Zs7XoJoG_u6wSgcOy4e0wnggxHV6Q&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=OhwWBMCibL-hHtZzSGm75g&oh=00_AfOtoH7iMBsBUZO44FewYnBg7uB2FUee0ehy4qfqtzxOXg&oe=68622054",
       titulo: "LA UAA y GIRAA AC unen fuerzas para impulsar la innovación y el desarrollo en Aguascalientes.",
       fecha: "06 de Febrero 2025"
@@ -49,14 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
       fecha: "01 de Febrero 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481994085_573081429100432_8289302445105742167_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=I2bAYZXN8AQQ7kNvwG8fcQ2&_nc_oc=AdljDADmEwPP4L01GbRQpO9JM4CHlUaZCm-0a8z5qTacNt0d1hmrNW3nXcpAh34KP83_zrelmGBuUaGjbortUrby&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=A430SCgTeMy0ZgxIZ9IBvg&oh=00_AfNk2F1Ug87bdOjGFFbaPF2-zU20mztqvmcPYlXZud9HWQ&oe=686212EC",
-      titulo: "El Vicepresidente  del Clúster Automotriz GIRAA Mel Wilhem, tomó protesta como parte del Comité Estatal de Educación Dual en Educación Media Superior... ¡Felicidades!.",
-      fecha: "23 de Febrero 2025"
-    },
-    {
       src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481985924_572944875780754_782459568704490221_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gFWxl4YHTI0Q7kNvwH3y0nn&_nc_oc=Adn5_uWvIjMuSP14NwBPd7LerbxHVgrQbRXMYfoH45UHiho9hqxVkD5bvZgq8y411McKX1lIZ_tdyFSQA2qYovpD&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=6z3GLbYY86Fsq9ez9Ah48g&oh=00_AfPoerzogDS_yD_I9jrqgDoXPBswvFwkK6SEAmekbkOWKA&oe=6862130D",
       titulo: "Los empresarios de Aguascalientes tienen la capacidad y fortaleza para enfrentar los retos y desafíos del 2025: CEEA.",
-      fecha: "23 de Febrero 2025"
+      fecha: "14 de Enero 2025"
     },
     {
       src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/482303519_572873712454537_1604038815095986070_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=OZbPpEpwilYQ7kNvwGO8MuJ&_nc_oc=AdmmL7VR1uLmmyYCi7jzBrkBwc_QhSc16kCoxTN7zcQR1k2Yj7Kh6k2cYlEvKcQ1fVNKSrQPaNQBzM0XEKw1enQM&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=M6ZumDY6JRyePeSVXAedEg&oh=00_AfOmpg0V4LahbzVoxPRgooesfZ1i_rSchbwQDzmbsCvJSQ&oe=68620B28",
