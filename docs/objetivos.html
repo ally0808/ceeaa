@@ -1,29 +1,44 @@
 <!DOCTYPE html>
+<!-- Tipo de documento HTML5 -->
+
 <html lang="es">
+<!-- El idioma principal del sitio es español -->
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Objetivos | CEEA Aguascalientes</title>
+  <!-- Codificación de caracteres UTF-8 para soportar acentos y caracteres especiales -->
 
-  <!-- Favicon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Hace que la página sea responsiva para móviles -->
+
+  <title>Objetivos | CEEA Aguascalientes</title>
+  <!-- Título de la pestaña del navegador -->
+
+  <!-- Favicon (ícono pequeño en la pestaña del navegador) -->
   <link rel="icon" href="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/342176173_203975092380751_2564658307533656109_n.jpg" type="image/png" />
 
-  <!-- CSS -->
+  <!-- CSS PRINCIPAL (estilos globales y del navbar) -->
   <link rel="stylesheet" href="inicio.css">
+
+  <!-- CSS ESPECÍFICO de esta vista (Objetivos) -->
   <link rel="stylesheet" href="objetivos.css">
 
-  <!-- FontAwesome -->
+  <!-- FontAwesome (para los íconos como el de menú hamburguesa) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR (barra de navegación superior) -->
   <nav class="navbar-bg">
     <div class="navbar-mini-container">
+      <!-- Botón hamburguesa (se muestra en pantallas pequeñas) -->
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-bars"></i>  <!-- Icono de barra -->
+        <i class="fa-solid fa-xmark"></i> <!-- Icono de X para cerrar -->
       </button>
+
+      <!-- Lista de navegación -->
       <ul class="nav-list" id="navbarList">
         <li><a href="index.html">Home</a></li>
         <li><a href="objetivos.html" class="active">Objetivos</a></li>
@@ -35,28 +50,32 @@
     </div>
   </nav>
 
-  <!-- MAIN -->
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
     <h2 class="objetivos-titulo-contenedores">Nuestros Objetivos</h2>
+    <!-- Contenedor donde se cargarán los objetivos dinámicamente con JavaScript -->
     <section id="objetivos-container" class="objetivos-cards-row">
-      <!-- Aquí se cargarán los objetivos dinámicamente desde objetivos.js -->
+      <!-- Aquí se insertarán las tarjetas de objetivos desde el archivo objetivos.js -->
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (pie de página) -->
   <footer>
     <div class="footer-bar">
+      <!-- Logos dentro del footer -->
       <div class="footer-logos">
-        <img src="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/277764273_100534895972778_4399351863634102879_n.png?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YOId0Prp19oQ7kNvwFIdLNQ&_nc_oc=AdkT28LUtQjLzhNkPhCboiKVlEvW5MBF8CMM6b7ScozO8RzDmjV_wS8_Sg1N-ItPOAotZ9iwwpgFUoq-4KYj7qtv&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=lrm-2ebJ9AsHVG_XAdKzTA&oh=00_AfO4qcS-axVpix9hnNasdGROtUtPkGv3DLGdZJeDFztLZA&oe=68620538" alt="AGS EI" class="logo-ags">
+        <img src="img/logo.png" alt="AGS EI" width="400">
         <img src="https://static.wixstatic.com/media/e26601_938afa7daacc48428d7f81b7327da453~mv2.png/v1/crop/x_0,y_1,w_390,h_184/fill/w_108,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/White%20investel.png" alt="Investel" class="logo-investel">
       </div>
+
+      <!-- Texto del copyright -->
       <div class="footer-text">
         2025 Consejo Estatal Empresarial de Aguascalientes &copy;
       </div>
     </div>
   </footer>
 
-  <!-- BUBBLES -->
+  <!-- BURBUJAS DECORATIVAS -->
   <div class="bubbles">
     <div class="bubble"></div>
     <div class="bubble"></div>
@@ -65,8 +84,12 @@
     <div class="bubble"></div>
   </div>
 
-  <!-- JS -->
+  <!-- SCRIPTS JAVASCRIPT -->
   <script src="menu.js"></script>
+  <!-- Este archivo controla el menú responsivo (hamburguesa) -->
+
   <script src="objetivos.js"></script>
+  <!-- Este archivo cargará dinámicamente los objetivos desde tu backend o un JSON -->
+  
 </body>
 </html>

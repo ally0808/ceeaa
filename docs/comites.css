@@ -1,41 +1,42 @@
-/* RESET */
+/* RESET GENERAL DE ESTILOS */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Incluye padding y border dentro del tamaño total de los elementos */
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%);
-  color: #222;
-  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif; /* Fuente general */
+  background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%); /* Fondo con degradado azul */
+  color: #222; /* Color de texto principal */
+  min-height: 100vh; /* Mínimo alto igual al viewport */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Permite que el footer se quede abajo */
 }
 
-/* NAVBAR y MINI CONTENEDOR */
+/* NAVBAR (barra de navegación superior) */
 .navbar-bg {
-  background: #143c7d;
+  background: #143c7d; /* Fondo azul oscuro */
   width: 100%;
 }
 
 .navbar-mini-container {
-  background: #092e72;
+  background: #092e72; /* Fondo más oscuro debajo del navbar */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 12px 12px; /* Bordes redondeados abajo */
   height: 54px;
   width: 100%;
   position: relative;
-  box-shadow: 0 2px 8px rgba(20, 60, 125, 0.07);
+  box-shadow: 0 2px 8px rgba(20, 60, 125, 0.07); /* Sombra ligera abajo */
   margin: 0 auto;
   padding: 0;
 }
 
+/* BOTÓN HAMBURGUESA PARA MENÚ RESPONSIVO */
 .menu-toggle {
-  display: none;
+  display: none; /* Solo se muestra en pantallas pequeñas */
   background: none;
   border: none;
   outline: none;
@@ -48,32 +49,34 @@ body {
   cursor: pointer;
 }
 
+/* Iconos dentro del botón hamburguesa */
 .menu-toggle .fa-xmark {
-  display: none;
+  display: none; /* La X solo se muestra cuando el menú está abierto */
 }
 
 .menu-toggle.open .fa-bars {
-  display: none;
+  display: none; /* Oculta el icono de barras al abrir el menú */
 }
 
 .menu-toggle.open .fa-xmark {
-  display: inline;
+  display: inline; /* Muestra la X al abrir el menú */
 }
 
+/* MENÚ RESPONSIVO PARA CELULAR */
 @media (max-width: 700px) {
   .menu-toggle {
-    display: block;
+    display: block; /* Muestra el botón hamburguesa en móviles */
   }
 
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: 54px;
+    top: 54px; /* Justo debajo del navbar */
     left: 0;
     background: #092e72;
     width: 100%;
-    max-height: 0;
+    max-height: 0; /* Oculto por defecto */
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(20, 60, 125, 0.07);
     transition: max-height 0.3s;
@@ -81,7 +84,7 @@ body {
   }
 
   .nav-list.open {
-    max-height: 500px;
+    max-height: 500px; /* Se expande al abrir */
     padding: 10px 0;
   }
 
@@ -97,13 +100,14 @@ body {
   }
 }
 
+/* ESTILO PARA LINKS ACTIVOS Y HOVER EN MENÚ */
 .nav-list li a:hover,
 .nav-list li a.active {
   background: #4ad1ff;
   color: #143c7d;
 }
 
-/* Título */
+/* TÍTULO DE LA SECCIÓN DE COMITÉS */
 .objetivos-titulo-contenedores {
   margin-top: 18px;
   margin-bottom: 10px;
@@ -116,6 +120,7 @@ body {
   position: relative;
 }
 
+/* TAMAÑO RESPONSIVO DEL TÍTULO */
 @media (max-width: 700px) {
   .objetivos-titulo-contenedores {
     font-size: 2.4em;
@@ -130,7 +135,7 @@ body {
   }
 }
 
-/* CONTENIDO */
+/* CONTENEDOR PRINCIPAL DE LOS COMITÉS */
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -141,6 +146,7 @@ body {
   position: relative;
 }
 
+/* INTRODUCCIÓN */
 .intro {
   text-align: center;
   font-size: 1.13em;
@@ -153,7 +159,7 @@ body {
   border: none !important;
 }
 
-/* Estilo de cada comité */
+/* ESTILO DE CADA COMITÉ */
 .comite {
   margin-bottom: 38px;
   display: flex;
@@ -164,12 +170,13 @@ body {
   border-radius: 18px;
   padding: 22px 20px;
   box-shadow: 0 4px 24px #2567b022, 0 1.5px 10px #2567b033;
-  opacity: 0;
-  transform: translateY(30px);
+  opacity: 0; /* Para animación de entrada */
+  transform: translateY(30px); /* Animación inicial */
   border-left: 8px solid #4ad1ff;
   transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
 }
 
+/* EFECTO AL PASAR EL CURSOR SOBRE CADA COMITÉ */
 .comite:hover {
   background: linear-gradient(103deg, #e8f9ff 80%, #dffbff 100%);
   box-shadow: 0 8px 28px #143c7d33;
@@ -181,12 +188,14 @@ body {
   color: #0a2c62;
 }
 
+/* INTERCALAR COMITÉS (PAR E IMPAR) */
 .comite:nth-child(even) {
   flex-direction: row-reverse;
   border-left: none;
   border-right: 8px solid #4ad1ff;
 }
 
+/* TÍTULO DE CADA COMITÉ */
 .comite h2 {
   color: #144389;
   font-size: 1.3em;
@@ -196,6 +205,7 @@ body {
   text-shadow: 0 1px 8px #d2eaffcc;
 }
 
+/* TEXTO DEL COMITÉ */
 .comite p {
   margin: 0 0 10px 0;
   font-size: 1.07em;
@@ -203,6 +213,7 @@ body {
   line-height: 1.7;
 }
 
+/* IMÁGENES DE CADA COMITÉ */
 .comite img {
   min-width: 120px;
   width: 180px;
@@ -215,6 +226,7 @@ body {
   box-shadow: 0 2px 8px #4ad1ff21;
 }
 
+/* CONTENEDOR DEL TEXTO DEL COMITÉ */
 .comite-text {
   flex: 1 1 0%;
   display: flex;
@@ -222,7 +234,7 @@ body {
   justify-content: center;
 }
 
-/* Botón subir */
+/* BOTÓN FLOTANTE PARA SUBIR ARRIBA */
 #btn-subir {
   position: fixed;
   right: 32px;
@@ -238,11 +250,12 @@ body {
   font-size: 2.1em;
   box-shadow: 0 4px 18px #143c7d44;
   cursor: pointer;
-  display: none;
+  display: none; /* Oculto por defecto, se muestra con JS */
   opacity: 0.93;
   transition: background 0.2s, transform 0.2s, opacity 0.2s;
 }
 
+/* EFECTO HOVER DEL BOTÓN SUBIR */
 #btn-subir:hover {
   background: #4ad1ff;
   color: #143c7d;
@@ -250,11 +263,11 @@ body {
   opacity: 1;
 }
 
-/* FOOTER igual al de INICIO */
+/* FOOTER IGUAL AL DE LA PÁGINA DE INICIO */
 footer {
   width: 100%;
   background: none;
-  margin-top: auto;
+  margin-top: auto; /* Empuja el footer al fondo si el contenido es poco */
 }
 
 .footer-bar {
@@ -276,17 +289,19 @@ footer {
   flex-wrap: wrap;
 }
 
+/*
 .footer-logos img {
-  height: 54px;
-  width: 108px;
+  height: 28px;
+  width: 56px;
+  max-width: 44vw;
+}
+*/
+
+/* Mantener tamaño fijo de logos en footer */
+.footer-logos img {
+  height: 54px !important;
+  width: 108px !important;
   object-fit: contain;
-  background: none;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-  border: none;
-  display: block;
-  max-width: 40vw;
 }
 
 .footer-text {
@@ -296,15 +311,20 @@ footer {
   text-align: center;
 }
 
+/* MEDIA QUERIES PARA DIFERENTES RESOLUCIONES */
+
+/* Tablets grandes */
 @media (max-width: 1200px) {
   .container { max-width: 99vw; padding: 18px 3vw 26px; }
 }
 
+/* Tablets pequeñas */
 @media (max-width: 900px) {
   .container { max-width: 98vw; padding: 16px 2vw 26px; }
   .comite { gap: 18px; padding: 14px 8px; }
 }
 
+/* Celulares */
 @media (max-width: 700px) {
   .navbar-mini-container { height: auto; border-radius: 0 0 8px 8px; }
   .container { margin-top: 14px; }
@@ -318,12 +338,14 @@ footer {
   }
 }
 
+/* Celulares pequeños */
 @media (max-width: 600px) {
   .footer-logos { gap: 10vw; }
   .footer-logos img { height: 28px; width: 56px; max-width: 44vw; }
   .footer-text { font-size: 0.91rem; }
 }
 
+/* Pantallas muy pequeñas */
 @media (max-width: 400px) {
   .container { padding: 5px 1vw; }
   .comite img { width: 98vw; height: 80px; }

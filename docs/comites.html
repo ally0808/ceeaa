@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CEEA - Comités</title>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Para que sea responsive -->
 
-  <!-- Favicon -->
+  <title>CEEA - Comités</title> <!-- Título de la pestaña del navegador -->
+
+  <!-- Favicon (icono de la pestaña) -->
   <link rel="icon" href="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/342176173_203975092380751_2564658307533656109_n.jpg" type="image/png" />
 
-  <!-- CSS -->
+  <!-- CSS de estilos globales (fondo, navbar, footer, etc) -->
   <link rel="stylesheet" href="inicio.css">
+  <!-- CSS específico para esta vista (Comités) -->
   <link rel="stylesheet" href="comites.css">
 
-  <!-- FontAwesome para iconos -->
+  <!-- Librería de iconos FontAwesome (para el icono de menú hamburguesa, etc) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAVBAR: Menú superior que aparece en todas las vistas -->
   <nav class="navbar-bg">
     <div class="navbar-mini-container">
+      <!-- Botón hamburguesa (solo visible en móviles) -->
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-bars"></i> <!-- Icono de "abrir menú" -->
+        <i class="fa-solid fa-xmark"></i> <!-- Icono de "cerrar menú" -->
       </button>
+
+      <!-- Lista de enlaces del menú -->
       <ul class="nav-list" id="navbarList">
         <li><a href="index.html">Home</a></li>
         <li><a href="objetivos.html">Objetivos</a></li>
-        <li><a href="comites.html" class="active">Comités</a></li>
+        <li><a href="comites.html" class="active">Comités</a></li> <!-- Vista actual -->
         <li><a href="noticias.html">Noticias</a></li>
         <li><a href="galeria.html">Galería</a></li>
         <li><a href="contacto.html">Contacto</a></li>
@@ -35,45 +40,62 @@
     </div>
   </nav>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- CONTENIDO PRINCIPAL DE LA PÁGINA -->
   <div class="container">
+    
+    <!-- Título de la página -->
     <h2 class="objetivos-titulo-contenedores">
+      <!-- Título para escritorio (una sola línea) -->
       <span class="titulo-comites-desktop">Comités Estratégicos</span>
+      <!-- Título para móviles (con salto de línea) -->
       <span class="titulo-comites-mobile" style="display:none;">Comités<br>Estratégicos</span>
     </h2>
+
+    <!-- Texto introductorio debajo del título -->
     <p class="intro">
-      El CEEA está organizado en comités especializados que abordan diferentes áreas clave para el desarrollo del estado. Cada comité está integrado por expertos, empresarios y representantes del sector público.
+      El CEEA está organizado en comités especializados que abordan diferentes áreas clave para el desarrollo del estado.
+      Cada comité está integrado por expertos, empresarios y representantes del sector público.
     </p>
 
-    <!-- Aquí se cargarán los comités dinámicamente -->
+    <!-- Contenedor donde se van a cargar dinámicamente los comités con JavaScript -->
     <div id="comites-container">
-      <p>No se pudieron cargar los comités.</p>
+      <p>No se pudieron cargar los comités.</p> <!-- Mensaje por defecto si hay error al cargar -->
     </div>
+
   </div>
 
-  <!-- Botón de subir -->
+  <!-- BOTÓN FLOTANTE PARA SUBIR ARRIBA -->
   <button id="btn-subir" title="Ir arriba">&#8679;</button>
 
-  <!-- FOOTER -->
+  <!-- FOOTER: Pie de página común en todas las vistas -->
   <footer>
     <div class="footer-bar">
+      
+      <!-- Logos del footer -->
       <div class="footer-logos">
-        <img src="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/277764273_100534895972778_4399351863634102879_n.png?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YOId0Prp19oQ7kNvwFIdLNQ&_nc_oc=AdkT28LUtQjLzhNkPhCboiKVlEvW5MBF8CMM6b7ScozO8RzDmjV_wS8_Sg1N-ItPOAotZ9iwwpgFUoq-4KYj7qtv&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=lrm-2ebJ9AsHVG_XAdKzTA&oh=00_AfO4qcS-axVpix9hnNasdGROtUtPkGv3DLGdZJeDFztLZA&oe=68620538" alt="AGS EI" class="logo-ags">
-        <img src="https://static.wixstatic.com/media/e26601_938afa7daacc48428d7f81b7327da453~mv2.png" alt="Investel" class="logo-investel">
+        <img src="img/logo.png" alt="AGS EI" width="400">
+        <img src="img/Investel.png" alt="Investel" width="400">
       </div>
+
+      <!-- Texto de derechos -->
       <div class="footer-text">
         2025 Consejo Estatal Empresarial de Aguascalientes &copy;
       </div>
     </div>
   </footer>
 
-  <!-- JS -->
+  <!-- SCRIPT PARA EL MENÚ RESPONSIVE -->
   <script src="menu.js"></script>
+
+  <!-- SCRIPT PARA CARGAR LOS COMITÉS DESDE LA BASE DE DATOS -->
   <script src="comites.js"></script>
+
+  <!-- SCRIPT PARA EL BOTÓN SUBIR (scroll arriba) -->
   <script>
-    // Botón subir
     document.addEventListener("DOMContentLoaded", function() {
       const btnSubir = document.getElementById('btn-subir');
+      
+      // Mostrar el botón solo cuando el usuario haya hecho scroll hacia abajo
       window.addEventListener("scroll", function() {
         if (window.scrollY > 200) {
           btnSubir.style.display = "block";
@@ -81,10 +103,13 @@
           btnSubir.style.display = "none";
         }
       });
+
+      // Al hacer clic, subir suavemente al inicio de la página
       btnSubir.addEventListener("click", function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
   </script>
+
 </body>
 </html>

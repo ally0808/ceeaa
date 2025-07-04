@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Icono de la pestaña del navegador -->
   <link rel="icon" href="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/342176173_203975092380751_2564658307533656109_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGCsh4LPU5lb0uSBXjHr8vgqUarP4JuhpKpRqs_gm6GkgUzNds1ZTuDURIkSdmvhcvuxet8JhLjx_G7mtrsXci2&_nc_ohc=Od4HmQ8VYZQQ7kNvwHeuOZ9&_nc_oc=AdmfWsfrh16l9-tGCIYy9jdmDD6FCR4jw8p5F4ZYgPpUgwgi5JtCf5IvJjfxSyIKevYYr2Mc_ACB1C3ki5HF64pi&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=rk-P2vIcwM96rmfYvbfCcQ&oh=00_AfNlr-aM_cZKnzGMXTPvmzyByL0BuOQD7F21dE_2hw2kaQ&oe=685BCA14" type="image/png" />
+  
+  <!-- Configuración de caracteres -->
   <meta charset="UTF-8">
+  
+  <!-- Vista responsiva para dispositivos móviles -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Título que aparece en la pestaña del navegador -->
   <title>CEEA - Noticias y Actualizaciones</title>
+  
+  <!-- Enlace al archivo de estilos específico para noticias -->
   <link rel="stylesheet" href="noticias.css">
+  
+  <!-- Enlace al archivo CSS del menú -->
   <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar-bg">
-  <div class="navbar-mini-container">
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-      <i class="fa-solid fa-bars"></i>
-      <i class="fa-solid fa-xmark"></i>
-    </button>
-    <ul class="nav-list" id="navbarList">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="objetivos.html">Objetivos</a></li>
-      <li><a href="comites.html">Comités</a></li>
-      <li><a href="noticias.html" class="active">Noticias</a></li>
-      <li><a href="galeria.html">Galería</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </div>
-</nav>
 
+  <!-- NAVBAR (barra de navegación) -->
+  <nav class="navbar-bg">
+    <div class="navbar-mini-container">
+      
+      <!-- Botón del menú hamburguesa para móviles -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <i class="fa-solid fa-bars"></i> <!-- Icono de menú -->
+        <i class="fa-solid fa-xmark"></i> <!-- Icono de cerrar -->
+      </button>
+
+      <!-- Lista de navegación (links) -->
+      <ul class="nav-list" id="navbarList">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="objetivos.html">Objetivos</a></li>
+        <li><a href="comites.html">Comités</a></li>
+        <li><a href="noticias.html" class="active">Noticias</a></li> <!-- Página actual -->
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
+    <!-- Título grande de la página -->
     <h2 class="objetivos-titulo-contenedores">Noticias y Actualizaciones</h2>
+    
+    <!-- Contenedor donde se cargarán las noticias desde la API -->
     <section id="lista-noticias"></section>
   </main>
 
-  <!-- Botón de subir -->
+  <!-- BOTÓN FLOTANTE PARA SUBIR ARRIBA -->
   <button id="btn-subir" title="Ir arriba">&#8679;</button>
 
-  <!-- FOOTER igual al de INICIO -->
+  <!-- FOOTER (igual que en la página de inicio) -->
   <footer>
     <div class="footer-bar">
+
+      <!-- Logos del footer -->
       <div class="footer-logos">
-        <img src="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/277764273_100534895972778_4399351863634102879_n.png?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=YOId0Prp19oQ7kNvwFIdLNQ&_nc_oc=AdkT28LUtQjLzhNkPhCboiKVlEvW5MBF8CMM6b7ScozO8RzDmjV_wS8_Sg1N-ItPOAotZ9iwwpgFUoq-4KYj7qtv&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=lrm-2ebJ9AsHVG_XAdKzTA&oh=00_AfO4qcS-axVpix9hnNasdGROtUtPkGv3DLGdZJeDFztLZA&oe=68620538" alt="AGS EI" class="logo-ags">
-        <img src="https://static.wixstatic.com/media/e26601_938afa7daacc48428d7f81b7327da453~mv2.png/v1/crop/x_0,y_1,w_390,h_184/fill/w_108,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/White%20investel.png" alt="Investel" class="logo-investel">
+        <!-- Logo de AGS EI -->
+        <img src="img/logo.png" alt="AGS EI" width="400">
+        
+        <!-- Logo de Investel -->
+        <img src="img/Investel.png" alt="Investel" width="400">
       </div>
+
+      <!-- Texto legal del footer -->
       <div class="footer-text">
         2025 Consejo Estatal Empresarial de Aguascalientes &copy;
       </div>
+
     </div>
   </footer>
 
+  <!-- SCRIPT DEL MENÚ (para abrir/cerrar en móvil) -->
   <script src="menu.js"></script>
+
+  <!-- SCRIPT PARA CARGAR LAS NOTICIAS DESDE EL BACKEND -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       const lista = document.getElementById('lista-noticias');
+      
+      // Mensaje mientras carga
       lista.innerHTML = "<p style='color:#222; text-align:center;'>Cargando noticias...</p>";
 
+      // Solicitud a la API para obtener las noticias
       fetch('https://ceeaa-backend.onrender.com/api/noticias')
         .then(res => {
           if (!res.ok) throw new Error('Error de red');
@@ -61,23 +95,33 @@
         })
         .then(data => {
           lista.innerHTML = "";
+
+          // Si no hay noticias
           if (!Array.isArray(data) || data.length === 0) {
             lista.innerHTML = "<p style='color:#222; text-align:center;'>No hay noticias disponibles.</p>";
             return;
           }
+
+          // Si hay noticias, recorrer y agregarlas al DOM
           data.forEach(noticia => {
             const section = document.createElement('section');
             section.classList.add('noticia');
+
+            // Obtener solo la fecha (primeros 10 caracteres)
             const soloFecha = noticia.fecha_publicacion ? noticia.fecha_publicacion.toString().slice(0,10) : '';
+
+            // Crear el contenido de cada noticia
             section.innerHTML = `
               <h2>${noticia.titulo}</h2>
               <small>${soloFecha}</small>
               <p>${noticia.contenido}</p>
             `;
+
+            // Agregar al contenedor
             lista.appendChild(section);
           });
 
-          // Animación de aparición
+          // Animación de aparición de cada noticia (con IntersectionObserver)
           const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
@@ -90,10 +134,11 @@
           document.querySelectorAll('.noticia').forEach(n => observer.observe(n));
         })
         .catch(err => {
+          // Si hay error al cargar noticias
           lista.innerHTML = "<p style='color:#c00; text-align:center;'>No se pudieron cargar las noticias.</p>";
         });
 
-      // Código para el botón de subir
+      // Mostrar o esconder el botón de subir según el scroll
       const btnSubir = document.getElementById('btn-subir');
       window.addEventListener("scroll", function() {
         if (window.scrollY > 200) {
@@ -102,12 +147,15 @@
           btnSubir.style.display = "none";
         }
       });
+
+      // Evento para subir arriba cuando se hace clic
       btnSubir.addEventListener("click", function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     });
-    
   </script>
 </body>
 </html>
+
+<!-- Enlace externo a la librería FontAwesome para iconos -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

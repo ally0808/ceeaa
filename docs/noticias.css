@@ -1,23 +1,26 @@
-/* RESET */
+/* RESET: Elimina márgenes y paddings por defecto en todos los elementos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Estilo general del body */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%);
+  background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%); /* Fondo de gradiente */
   color: #222;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* NAVBAR y MINI CONTENEDOR */
+/* NAVBAR y MINI CONTENEDOR (barra de navegación superior) */
 .navbar-bg {
   background: #143c7d;
   width: 100%;
 }
+
 .navbar-mini-container {
   background: #092e72;
   display: flex;
@@ -32,6 +35,7 @@ body {
   position: relative;
 }
 
+/* Botón hamburguesa para móviles */
 .menu-toggle {
   display: none;
   background: none;
@@ -48,26 +52,30 @@ body {
 }
 
 .menu-toggle.open {
-  color: #4ad1ff;
+  color: #4ad1ff; /* Cambia color cuando está abierto */
 }
 
+/* Oculta icono de cerrar por defecto */
 .menu-toggle .fa-xmark {
   display: none;
 }
 
+/* Alternar iconos en estado abierto */
 .menu-toggle.open .fa-bars {
   display: none;
 }
-
 .menu-toggle.open .fa-xmark {
   display: inline;
 }
 
+/* Mostrar botón hamburguesa solo en móviles */
 @media (max-width: 700px) {
   .menu-toggle {
     display: block;
   }
 }
+
+/* Lista de navegación */
 .nav-list {
   list-style: none;
   display: flex;
@@ -76,9 +84,11 @@ body {
   margin: 0;
   transition: max-height 0.3s;
 }
+
 .nav-list li {
   display: flex;
 }
+
 .nav-list li a {
   color: #fff;
   background: transparent;
@@ -91,12 +101,15 @@ body {
   transition: background 0.2s, color 0.2s;
   display: block;
 }
-.nav-list li a:hover, .nav-list li a.active {
+
+/* Estilo para hover y link activo */
+.nav-list li a:hover,
+.nav-list li a.active {
   background: #4ad1ff;
   color: #143c7d;
 }
 
-/* LOGO CON FONDO */
+/* LOGO CON FONDO (imagen central) */
 .header-logo {
   position: relative;
   display: flex;
@@ -107,6 +120,7 @@ body {
   overflow: hidden;
   z-index: 1;
 }
+
 .header-logo img {
   position: relative;
   height: 120px;
@@ -114,7 +128,7 @@ body {
   z-index: 2;
 }
 
-/* Título igual que objetivos y comités */
+/* Título principal (igual que en objetivos y comités) */
 .objetivos-titulo-contenedores {
   margin-top: 18px;
   margin-bottom: 10px;
@@ -127,6 +141,8 @@ body {
   position: relative;
   text-shadow: 0 2px 16px #2567b0bb, 0 1px 0 #fff;
 }
+
+/* Título responsive */
 @media (max-width: 700px) {
   .objetivos-titulo-contenedores {
     font-size: 2.4em;
@@ -140,7 +156,7 @@ body {
   }
 }
 
-/* CONTENEDOR NOTICIAS */
+/* CONTENEDOR DE NOTICIAS */
 main {
   flex: 1;
   display: flex;
@@ -150,7 +166,7 @@ main {
   background: none;
 }
 
-/* Noticias Grid */
+/* Contenedor de la lista de noticias (grid vertical) */
 #lista-noticias {
   width: 100%;
   max-width: 950px;
@@ -162,7 +178,7 @@ main {
   margin-bottom: 2em;
 }
 
-/* Noticia Card Estilo Moderno */
+/* Tarjetas individuales de cada noticia */
 .noticia {
   background: linear-gradient(110deg, #fff 70%, #e2f6ff 100%);
   border-radius: 24px;
@@ -178,10 +194,14 @@ main {
   transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
   will-change: opacity, transform;
 }
+
+/* Animación de aparición */
 .noticia.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Título de la noticia */
 .noticia h2 {
   color: #2567B0;
   font-size: 1.65em;
@@ -191,6 +211,8 @@ main {
   letter-spacing: 0.04em;
   text-shadow: 0 1px 8px #d2eaffcc;
 }
+
+/* Fecha de la noticia */
 .noticia small {
   display: inline-block;
   font-size: 1em;
@@ -204,6 +226,8 @@ main {
   letter-spacing: 0.5px;
   box-shadow: 0 1px 5px #4ad1ff18;
 }
+
+/* Contenido de la noticia */
 .noticia p {
   color: #222;
   font-size: 1.13em;
@@ -212,6 +236,8 @@ main {
   word-break: break-word;
   letter-spacing: 0.03em;
 }
+
+/* Efecto decorativo de fondo en la esquina de cada noticia */
 .noticia:before {
   content: "";
   position: absolute;
@@ -223,7 +249,7 @@ main {
   z-index: 0;
 }
 
-/* Botón de subir */
+/* BOTÓN FLOTANTE DE SUBIR */
 #btn-subir {
   position: fixed;
   right: 32px;
@@ -243,6 +269,7 @@ main {
   opacity: 0.93;
   transition: background 0.2s, transform 0.2s, opacity 0.2s;
 }
+
 #btn-subir:hover {
   background: #4ad1ff;
   color: #143c7d;
@@ -271,20 +298,20 @@ footer {
   justify-content: center;
   gap: 28px;
   margin-bottom: 8px;
-  flex-wrap: wrap; /* Para que los logos salten de línea si no caben */
+  flex-wrap: wrap; /* Que los logos bajen de línea si no caben */
 }
 
+/*
 .footer-logos img {
-  height: 54px;
-  width: 108px;
+  height: 38px;
+  width: 76px;
+}
+*/
+
+.footer-logos img {
+  height: 54px !important;
+  width: 108px !important;
   object-fit: contain;
-  background: none;
-  border-radius: 0;
-  padding: 0;
-  box-shadow: none;
-  border: none;
-  display: block;
-  max-width: 40vw;
 }
 
 .footer-text {
@@ -294,12 +321,16 @@ footer {
   text-align: center;
 }
 
-/* RESPONSIVE ADAPTACIONES */
+/* MEDIA QUERIES: RESPONSIVE ADAPTACIONES */
+
+/* Ajustes para pantallas medianas */
 @media (max-width: 1100px) {
   #lista-noticias {
     max-width: 99vw;
   }
 }
+
+/* Ajustes para tablets y pantallas pequeñas */
 @media (max-width: 900px) {
   .noticia {
     padding: 1.2em 1em;
@@ -308,24 +339,30 @@ footer {
   .footer-logos img { height: 40px; width: 80px; max-width: 48vw; }
   .footer-text { font-size: 0.91rem; }
 }
+
+/* Ajustes para móviles */
 @media (max-width: 700px) {
   .navbar-mini-container {
     height: auto;
     border-radius: 0 0 8px 8px;
   }
+
+  /* Menú hamburguesa para móviles */
   .menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  outline: none;
-  font-size: 2rem;
-  color: #fff;
-  position: absolute;
-  left: 20px;
-  top: 10px;
-  z-index: 20;
-  cursor: pointer;
-}
+    display: none;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 20;
+    cursor: pointer;
+  }
+
+  /* Menú desplegable */
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
@@ -341,18 +378,23 @@ footer {
     transition: max-height 0.3s;
     z-index: 10;
   }
+
   .nav-list.open {
     max-height: 500px;
     padding: 10px 0;
   }
+
   .nav-list li { width: 100%; }
+
   .nav-list li a {
     width: 100%;
     padding: 14px 28px;
     font-size: 1.1rem;
     border-radius: 0;
   }
+
   .footer-logos img { height: 40px; width: 80px; max-width: 48vw; }
+
   #btn-subir {
     right: 18px;
     bottom: 18px;
@@ -361,6 +403,8 @@ footer {
     font-size: 1.35em;
   }
 }
+
+/* Más ajustes responsive */
 @media (max-width: 600px) {
   .noticia {
     padding: 1em;
@@ -374,6 +418,8 @@ footer {
   .footer-text { font-size: 0.91rem; }
   #lista-noticias { gap: 1em; }
 }
+
+/* Pantallas muy pequeñas */
 @media (max-width: 400px) {
   .noticia {
     padding: 0.7em;

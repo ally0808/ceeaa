@@ -1,47 +1,49 @@
-/* RESET */
+/* RESET GENERAL - Elimina márgenes y rellenos por defecto en todos los elementos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* CONFIGURACIÓN GLOBAL DEL BODY */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #0f3d7b 0%, #5ac8fa 100%);
-  color: #222;
-  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif; /* Fuente general */
+  background: linear-gradient(180deg, #0f3d7b 0%, #5ac8fa 100%); /* Fondo en gradiente vertical */
+  color: #222; /* Color de texto por defecto */
+  min-height: 100vh; /* Altura mínima para cubrir toda la ventana */
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-/* NAVBAR */
+/* NAVBAR (Barra de navegación superior fija) */
 .navbar-bg {
-  background: rgba(15, 61, 123, 0.97);
+  background: rgba(15, 61, 123, 0.97); /* Color azul semitransparente */
   width: 100%;
-  z-index: 100;
-  position: fixed;
+  z-index: 100; /* Aparece encima de otros elementos */
+  position: fixed; /* Siempre visible arriba */
   top: 0;
   left: 0;
 }
 
 .navbar-mini-container {
-  background: rgba(15, 61, 123, 0.97);
+  background: rgba(15, 61, 123, 0.97); /* Mismo color que navbar */
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 12px 12px; /* Bordes redondeados solo abajo */
   margin: 0 auto;
   padding: 0;
   width: 100%;
   height: 54px;
-  box-shadow: 0 2px 8px rgba(20, 60, 125, 0.07);
+  box-shadow: 0 2px 8px rgba(20, 60, 125, 0.07); /* Sombra suave debajo */
   position: relative;
   z-index: 110;
 }
 
+/* Botón hamburguesa (solo se muestra en móvil) */
 .menu-toggle {
-  display: none;
+  display: none; /* Por defecto oculto en escritorio */
   background: none;
   border: none;
   outline: none;
@@ -54,11 +56,12 @@ body {
   z-index: 120;
 }
 
+/* LISTA DE ENLACES DEL NAV */
 .nav-list {
   list-style: none;
-  display: flex;
-  gap: 36px;
-  transition: max-height 0.3s;
+  display: flex; /* En fila */
+  gap: 36px; /* Separación entre botones */
+  transition: max-height 0.3s; /* Para animación responsive */
   padding: 0;
   margin: 0;
 }
@@ -79,13 +82,14 @@ body {
   display: block;
 }
 
+/* Estilo cuando el enlace está activo o en hover */
 .nav-list li a:hover,
 .nav-list li a.active {
   background: #5ac8fa;
   color: #0f3d7b;
 }
 
-/* BUBBLES */
+/* BURBUJAS DECORATIVAS EN EL FONDO */
 .bubbles {
   position: fixed;
   bottom: 10px;
@@ -94,7 +98,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  pointer-events: none;
+  pointer-events: none; /* Que no afecten clics */
   z-index: 0;
 }
 
@@ -102,17 +106,19 @@ body {
   position: absolute;
   bottom: -80px;
   background: rgba(74, 209, 255, 0.32);
-  border-radius: 50%;
+  border-radius: 50%; /* Forma circular */
   opacity: 0.95;
   animation: bubbleUp 9s linear infinite;
 }
 
+/* Posiciones y tamaños individuales para cada burbuja */
 .bubble:nth-child(1) { left: 12%; width: 64px; height: 64px; animation-delay: 0s; }
 .bubble:nth-child(2) { left: 40%; width: 40px; height: 40px; animation-delay: 2s; }
 .bubble:nth-child(3) { left: 76%; width: 54px; height: 54px; animation-delay: 1.2s; }
 .bubble:nth-child(4) { left: 30%; width: 32px; height: 32px; animation-delay: 3.2s; }
 .bubble:nth-child(5) { left: 60%; width: 70px; height: 70px; animation-delay: 4s; }
 
+/* Animación de subida de las burbujas */
 @keyframes bubbleUp {
   0% { transform: translateY(0) scale(1); opacity: 0.85; }
   30% { opacity: 1; }
@@ -120,7 +126,7 @@ body {
   100% { transform: translateY(-700px) scale(1.2); opacity: 0; }
 }
 
-/* MAIN */
+/* MAIN - Contenedor Principal */
 main {
   flex: 1;
   display: flex;
@@ -128,10 +134,10 @@ main {
   align-items: center;
   position: relative;
   z-index: 1;
-  padding-top: 70px;
+  padding-top: 70px; /* Espacio para no tapar el navbar fijo */
 }
 
-/* Título */
+/* TÍTULO PRINCIPAL DE LA SECCIÓN OBJETIVOS */
 .objetivos-titulo-contenedores {
   margin-top: 18px;
   margin-bottom: 10px;
@@ -144,6 +150,7 @@ main {
   position: relative;
 }
 
+/* Responsividad del título */
 @media (max-width: 700px) {
   .objetivos-titulo-contenedores {
     margin-top: 6px;
@@ -158,7 +165,7 @@ main {
   }
 }
 
-/* Contenedor de tarjetas */
+/* CONTENEDOR DE LAS TARJETAS DE OBJETIVOS */
 .objetivos-cards-row {
   display: flex;
   flex-direction: column;
@@ -173,6 +180,7 @@ main {
   position: relative;
 }
 
+/* Fila de tarjetas en escritorio */
 .objetivos-cards-fila {
   display: flex;
   flex-direction: row;
@@ -181,6 +189,7 @@ main {
   width: 100%;
 }
 
+/* DISEÑO DE CADA TARJETA */
 .objetivos-grid-card {
   background: #ffffff;
   border-radius: 20px;
@@ -194,22 +203,25 @@ main {
   align-items: center;
   text-align: center;
   padding: 2em 1.7em 1.3em 1.7em;
-  opacity: 0;
+  opacity: 0; /* Oculto inicialmente (se animará después) */
   transform: translateY(40px) scale(0.98);
   transition: opacity 0.7s, transform 0.7s, box-shadow 0.3s, transform 0.3s, background 0.3s;
 }
 
+/* Cuando la tarjeta está visible (con JS le añades la clase .show) */
 .objetivos-grid-card.show {
   opacity: 1;
   transform: none;
 }
 
+/* ÍCONO de cada tarjeta */
 .objetivos-grid-card i {
   font-size: 2.2em;
   margin-bottom: 13px;
   color: #26a7e7;
 }
 
+/* Título dentro de la tarjeta */
 .objetivos-grid-card h3 {
   color: #0f3d7b;
   font-size: 1.14em;
@@ -217,11 +229,13 @@ main {
   margin-bottom: 10px;
 }
 
+/* Texto descriptivo de la tarjeta */
 .objetivos-grid-card p {
   color: #24517e;
   font-size: 1em;
 }
 
+/* Animación hover en las tarjetas */
 .objetivos-grid-card:hover,
 .objetivos-grid-card:focus {
   box-shadow: 0 8px 24px rgba(15, 61, 123, 0.25);
@@ -230,7 +244,7 @@ main {
   outline: none;
 }
 
-/* FOOTER */
+/* FOOTER - Pie de página */
 footer {
   width: 100%;
   margin-top: auto;
@@ -239,7 +253,7 @@ footer {
 }
 
 .footer-bar {
-  background: #0f3d7b;
+  background: #092e72;
   width: 100%;
   padding: 22px 0 10px 0;
   display: flex;
@@ -247,15 +261,16 @@ footer {
   align-items: center;
 }
 
-.footer-logos {
-  display: flex;
-  align-items: center;
-  gap: 28px;
+/*
+.footer-logos img {
+  height: 38px;
+  width: 76px;
 }
+*/
 
 .footer-logos img {
-  height: 54px;
-  width: 108px;
+  height: 54px !important;
+  width: 108px !important;
   object-fit: contain;
 }
 
@@ -264,7 +279,14 @@ footer {
   color: #cce6ff;
 }
 
-/* RESPONSIVE */
+.logo {
+  background-image: url('../img/logo.png');
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
+
+/* RESPONSIVE - Ajustes para pantallas pequeñas */
 @media (max-width: 700px) {
   .navbar-mini-container {
     height: auto;
@@ -272,7 +294,7 @@ footer {
   }
 
   .menu-toggle {
-    display: block;
+    display: block; /* Ahora el botón hamburguesa es visible */
   }
 
   .nav-list {
@@ -283,7 +305,7 @@ footer {
     left: 0;
     background: rgba(15, 61, 123, 0.97);
     width: 100%;
-    max-height: 0;
+    max-height: 0; /* Inicialmente cerrado */
     overflow: hidden;
     gap: 0;
     box-shadow: 0 8px 20px rgba(20, 60, 125, 0.07);
@@ -292,7 +314,7 @@ footer {
   }
 
   .nav-list.open {
-    max-height: 500px;
+    max-height: 500px; /* Se abre en móvil */
     padding: 10px 0;
   }
 
@@ -344,6 +366,7 @@ footer {
   }
 }
 
+/* Ajustes extra pequeños (menos de 420px) */
 @media (max-width: 420px) {
   .objetivos-grid-card {
     width: 98vw;

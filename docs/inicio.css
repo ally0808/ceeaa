@@ -1,40 +1,41 @@
-/* RESET */
+/* RESET: Elimina márgenes y rellenos por defecto de todos los elementos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo general del cuerpo de la página */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f4f4f4;
-  color: #222;
-  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif; /* Fuente de texto */
+  background: #f4f4f4; /* Color de fondo base (gris claro) */
+  color: #222; /* Color de texto */
+  min-height: 100vh; /* Altura mínima igual a la altura de la pantalla */
   display: flex;
   flex-direction: column;
 }
 
-/* NAVBAR y MINI CONTENEDOR */
+/* NAVBAR y CONTENEDOR DEL MENÚ */
 .navbar-bg {
-  background: #143c7d;
+  background: #143c7d; /* Azul oscuro */
   width: 100%;
 }
 
 .navbar-mini-container {
-  background: #092e72;
+  background: #092e72; /* Azul más oscuro */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 0 12px 12px;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  border-radius: 0 0 12px 12px; /* Bordes redondeados abajo */
   width: 100%;
   height: 54px;
-  box-shadow: 0 2px 8px rgba(20, 60, 125, 0.07);
+  box-shadow: 0 2px 8px rgba(20, 60, 125, 0.07); /* Sombra leve abajo */
   position: relative;
 }
 
-/* HAMBURGER ANIMADO */
+/* BOTÓN HAMBURGUESA (solo visible en móvil) */
 .menu-toggle {
-  display: none;
+  display: none; /* Oculto por defecto (solo se ve en móviles) */
   background: none;
   border: none;
   outline: none;
@@ -48,14 +49,14 @@ body {
   transition: color 0.2s;
 }
 .menu-toggle.open {
-  color: #4ad1ff;
+  color: #4ad1ff; /* Cambia color al abrir el menú */
 }
-.menu-toggle .fa-xmark {
-  display: none;
-}
+/* Alterna entre ícono de abrir (barras) y cerrar (X) */
+.menu-toggle .fa-xmark { display: none; }
 .menu-toggle.open .fa-bars { display: none; }
 .menu-toggle.open .fa-xmark { display: inline; }
 
+/* LISTA DEL MENÚ */
 .nav-list {
   list-style: none;
   display: flex;
@@ -81,14 +82,20 @@ body {
 
 .nav-list li a:hover,
 .nav-list li a.active {
-  background: #4ad1ff;
-  color: #143c7d;
+  background: #4ad1ff; /* Fondo azul claro al pasar el mouse o cuando está activo */
+  color: #143c7d; /* Texto azul oscuro */
 }
 
-/* RESPONSIVE NAVBAR - MENÚ MÁS COMPACTO EN CELULAR */
+/* NAVBAR RESPONSIVO (Móviles) */
 @media (max-width: 700px) {
-  .navbar-mini-container { height: 54px; border-radius: 0 0 8px 8px; position: relative;}
-  .menu-toggle { display: block; }
+  .navbar-mini-container {
+    height: 54px;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+  }
+  .menu-toggle {
+    display: block; /* Ahora sí se muestra el botón hamburguesa */
+  }
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
@@ -97,7 +104,7 @@ body {
     left: 0;
     width: 100vw;
     padding: 0;
-    max-height: 0;
+    max-height: 0; /* Oculto por defecto */
     overflow: hidden;
     background: #092e72;
     backdrop-filter: blur(7px);
@@ -108,18 +115,19 @@ body {
     gap: 0;
   }
   .nav-list.open {
-    max-height: 320px;   /* Ajusta alto si agregas más botones */
+    max-height: 320px; /* Altura al abrir */
     padding: 4px 0 8px;
   }
-  .nav-list li { width: 100%; }
+  .nav-list li {
+    width: 100%;
+  }
   .nav-list li a {
     width: 100%;
-    padding: 13px 18px;   /* Un poco más alto (más grueso) */
+    padding: 13px 18px;
     font-size: 1.12rem;
     border-radius: 0;
     font-weight: 600;
     letter-spacing: 1.5px;
-    transition: background 0.17s, color 0.17s;
     border-left: 4px solid transparent;
   }
   .nav-list li a:hover,
@@ -130,7 +138,7 @@ body {
   }
 }
 
-/* HERO SECTION */
+/* HERO SECTION: Sección de bienvenida */
 .hero {
   background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%);
   color: #fff;
@@ -157,7 +165,7 @@ body {
   z-index: 2;
 }
 
-/* Animaciones */
+/* ANIMACIONES */
 @keyframes fadeInHero {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: none; }
@@ -174,11 +182,18 @@ body {
   100% { box-shadow: 0 0 0 0 rgba(74, 209, 255, 0); }
 }
 
-.pulse { animation: pulse 2.5s infinite; }
-.fade-in-up { opacity: 0; animation: fadeInUp 0.85s forwards; }
+.pulse {
+  animation: pulse 2.5s infinite;
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.85s forwards;
+}
 .fade-in-up.delay-1 { animation-delay: 0.3s; }
 .fade-in-up.delay-2 { animation-delay: 0.6s; }
 
+/* LOGO en el hero */
 .logo-anim-container {
   display: flex;
   justify-content: center;
@@ -202,6 +217,7 @@ body {
   transform: scale(1.06) rotate(-1deg);
 }
 
+/* TÍTULOS en el hero */
 .hero-titles {
   display: flex;
   flex-direction: column;
@@ -232,6 +248,7 @@ body {
   text-shadow: 0 2px 18px #0a2c6240;
 }
 
+/* DESCRIPCIÓN del hero */
 .hero-desc {
   font-size: 1.15rem;
   font-weight: 300;
@@ -243,7 +260,7 @@ body {
   width: 100%;
 }
 
-/* Botones animados */
+/* BOTONES del hero */
 .hero-buttons {
   display: flex;
   gap: 20px;
@@ -286,7 +303,7 @@ body {
   color: #0a2c62;
 }
 
-/* Burbujas decorativas */
+/* BURBUJAS decorativas en el fondo */
 .bubbles {
   position: absolute;
   bottom: 10px;
@@ -308,12 +325,14 @@ body {
   animation: bubbleUp 9s linear infinite;
 }
 
+/* Tamaño y posición de cada burbuja */
 .bubble:nth-child(1) { left: 12%; width: 64px; height: 64px; animation-delay: 0s; }
 .bubble:nth-child(2) { left: 40%; width: 40px; height: 40px; animation-delay: 2s; }
 .bubble:nth-child(3) { left: 76%; width: 54px; height: 54px; animation-delay: 1.2s; }
 .bubble:nth-child(4) { left: 30%; width: 32px; height: 32px; animation-delay: 3.2s; }
 .bubble:nth-child(5) { left: 60%; width: 70px; height: 70px; animation-delay: 4s; }
 
+/* Animación de subida de burbujas */
 @keyframes bubbleUp {
   0% { transform: translateY(0) scale(1); opacity: 0.85; }
   30% { opacity: 1; }
@@ -321,7 +340,7 @@ body {
   100% { transform: translateY(-700px) scale(1.2); opacity: 0; }
 }
 
-/* FOOTER */
+/* FOOTER: Pie de página */
 footer {
   width: 100%;
 }
@@ -355,8 +374,14 @@ footer {
   color: #cce6ff;
   text-align: center;
 }
+.logo {
+  background-image: url('../img/logo.png');
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+}
 
-/* RESPONSIVE (ajustes de hero/footer para móvil) */
+/* RESPONSIVE: Ajustes de tamaño en móvil y tablet */
 @media (max-width: 900px) {
   .hero-inner { max-width: 98vw; padding: 1.3em 0.2em 1.2em; }
   .hero-desc { font-size: 1.01rem; padding: 13px 5px 11px; }

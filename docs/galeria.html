@@ -1,55 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Icono en la pestaña del navegador -->
   <link rel="icon" href="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/342176173_203975092380751_2564658307533656109_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGCsh4LPU5lb0uSBXjHr8vgqUarP4JuhpKpRqs_gm6GkgUzNds1ZTuDURIkSdmvhcvuxet8JhLjx_G7mtrsXci2&_nc_ohc=Od4HmQ8VYZQQ7kNvwHeuOZ9&_nc_oc=AdmfWsfrh16l9-tGCIYy9jdmDD6FCR4jw8p5F4ZYgPpUgwgi5JtCf5IvJjfxSyIKevYYr2Mc_ACB1C3ki5HF64pi&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=rk-P2vIcwM96rmfYvbfCcQ&oh=00_AfNlr-aM_cZKnzGMXTPvmzyByL0BuOQD7F21dE_2hw2kaQ&oe=685BCA14" type="image/png" />
+  
+  <!-- Configuración básica de la página -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CEEA - Galería</title>
+
+  <!-- Estilo específico de la galería -->
   <link rel="stylesheet" href="galeria.css">
+  
+  <!-- Librería de íconos FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Estilo del menú hamburguesa -->
   <link rel="stylesheet" href="menu.css">
 </head>
+
 <body>
-  <!-- NAVBAR -->
+  <!-- NAVBAR (menú de navegación superior) -->
   <nav class="navbar-bg">
     <div class="navbar-mini-container">
-      <!-- Botón hamburguesa animado -->
+      <!-- Botón hamburguesa para abrir/cerrar el menú en móviles -->
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-bars"></i>      <!-- Icono de barras -->
+        <i class="fa-solid fa-xmark"></i>     <!-- Icono de cerrar -->
       </button>
+
+      <!-- Lista de enlaces del menú -->
       <ul class="nav-list" id="navbarList">
         <li><a href="index.html">Home</a></li>
         <li><a href="objetivos.html">Objetivos</a></li>
         <li><a href="comites.html">Comités</a></li>
         <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="galeria.html" class="active">Galería</a></li>
+        <li><a href="galeria.html" class="active">Galería</a></li>  <!-- Página activa -->
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- CONTENIDO PRINCIPAL -->
   <main>
     <section class="galeria-section">
-      <h2 class="titulo-galeria">Eventos</h2>
+      <h2 class="titulo-galeria">Eventos</h2> <!-- Título de la sección -->
+
+      <!-- Contenedor donde se cargarán las imágenes de la galería -->
       <div id="galeria-container" class="galeria-tarjetas">
-        <p>Cargando imágenes...</p>
+        <p>Cargando imágenes...</p>  <!-- Mensaje temporal mientras se cargan -->
       </div>
     </section>
   </main>
 
-  <!-- Modal de imagen grande -->
+  <!-- MODAL PARA MOSTRAR IMAGEN AMPLIADA -->
   <div class="modal-img" id="modal-img">
+    <!-- Botón para cerrar el modal -->
     <span class="cerrar-modal" id="cerrar-modal">&times;</span>
+    
+    <!-- Imagen ampliada -->
     <img class="modal-img-contenido" id="img-grande" src="" alt="">
+
+    <!-- Título de la imagen -->
     <div class="modal-titulo" id="modal-titulo"></div>
+
+    <!-- Fecha de la imagen -->
     <div class="modal-fecha" id="modal-fecha"></div>
   </div>
 
-  <!-- Botón de subir -->
+  <!-- BOTÓN FLOTANTE PARA SUBIR -->
   <button id="btn-subir" title="Ir arriba">&#8679;</button>
 
-  <!-- Burbujas decorativas -->
+  <!-- BURBUJAS DECORATIVAS DE FONDO -->
   <div class="bubbles">
     <div class="bubble"></div>
     <div class="bubble"></div>
@@ -58,12 +80,13 @@
     <div class="bubble"></div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (Pie de página) -->
   <footer>
     <div class="footer-bar">
       <div class="footer-logos">
-        <img src="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/277764273_100534895972778_4399351863634102879_n.png?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=erVzc6NxJDAQ7kNvwFzd9K_&_nc_oc=AdkmQbTaWnzekK8rIgO5cU_jFmGZ-pu2zwkroeQdv1maeBo6o6iExk56SioTb9U5sNnBANOCfHobbJwEfHO0tzEh&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=pUHJVLCOfYopUehxJhFO8g&oh=00_AfNDv0kPMNHwbh18CzkZ54DendjT3WngX0Cle44pKKhjIA&oe=68612438" alt="AGS EI" class="logo-ags">
-        <img src="https://static.wixstatic.com/media/e26601_938afa7daacc48428d7f81b7327da453~mv2.png/v1/crop/x_0,y_1,w_390,h_184/fill/w_108,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/White%20investel.png" alt="Investel" class="logo-investel">
+        <!-- Logos de patrocinadores -->
+        <img src="img/logo.png" alt="AGS EI" width="400">
+        <img src="img/Investel.png" alt="Investel" width="400">
       </div>
       <div class="footer-text">
         2025 Consejo Estatal Empresarial de Aguascalientes &copy;
@@ -71,7 +94,13 @@
     </div>
   </footer>
 
+  <!-- SCRIPTS -->
+
+  <!-- Script para el menú responsive -->
   <script src="menu.js"></script>
+
+  <!-- Script específico para cargar imágenes de la galería y controlar el modal -->
   <script src="galeria.js"></script>
+
 </body>
 </html>

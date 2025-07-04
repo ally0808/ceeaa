@@ -1,8 +1,9 @@
-/* RESET */
+/* RESET GENERAL - Quitamos márgenes, paddings y ajustamos box-sizing */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%);
+  background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%); /* Fondo azul degradado como en inicio */
   color: #222;
   min-height: 100vh;
   display: flex;
@@ -10,23 +11,28 @@ body {
   position: relative;
 }
 
-/* NAVBAR igual */
+/* --------------------- NAVBAR --------------------- */
+
+/* Fondo azul oscuro para el navbar */
 .navbar-bg {
   background: #143c7d;
   width: 100%;
 }
+
+/* Contenedor del menú (con fondo más oscuro) */
 .navbar-mini-container {
   background: #092e72;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 0 12px 12px;
-  margin: 0 auto;
+  border-radius: 0 0 12px 12px; /* Esquinas redondeadas abajo */
   width: 100%;
   height: 54px;
   box-shadow: 0 2px 8px rgba(20,60,125,0.07);
   position: relative;
 }
+
+/* Botón hamburguesa solo en móvil */
 .menu-toggle {
   display: none;
   background: none;
@@ -40,6 +46,8 @@ body {
   z-index: 20;
   cursor: pointer;
 }
+
+/* Lista de enlaces del navbar */
 .nav-list {
   list-style: none;
   display: flex;
@@ -48,7 +56,11 @@ body {
   margin: 0;
   transition: max-height 0.3s;
 }
+
+/* Cada ítem de la lista */
 .nav-list li { display: flex; }
+
+/* Estilo de los links del menú */
 .nav-list li a {
   color: #fff;
   background: transparent;
@@ -61,20 +73,17 @@ body {
   transition: background 0.2s, color 0.2s;
   display: block;
 }
+
+/* Hover y enlace activo */
 .nav-list li a:hover, .nav-list li a.active {
   background: #4ad1ff;
   color: #143c7d;
 }
 
-/* RESPONSIVE NAVBAR */
+/* Responsive: menú hamburguesa en pantallas chicas */
 @media (max-width: 700px) {
-  .navbar-mini-container {
-    height: auto;
-    border-radius: 0 0 8px 8px;
-  }
-  .menu-toggle {
-    display: block;
-  }
+  .navbar-mini-container { height: auto; border-radius: 0 0 8px 8px; }
+  .menu-toggle { display: block; }
   .nav-list {
     flex-direction: column;
     align-items: flex-start;
@@ -85,10 +94,8 @@ body {
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    gap: 0;
     box-shadow: 0 8px 20px rgba(20,60,125,0.07);
     transition: max-height 0.3s;
-    z-index: 10;
   }
   .nav-list.open {
     max-height: 500px;
@@ -103,60 +110,53 @@ body {
   }
 }
 
-/* CONTENIDO CONTACTO */
+/* --------------------- CONTENIDO PRINCIPAL --------------------- */
+
+/* El main para que ocupe el espacio disponible */
 main {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em 0 2em 0;
+  padding: 2em 0;
   position: relative;
   z-index: 1;
 }
 
+/* Tarjeta blanca con el formulario y la info */
 .contacto-card {
   background: rgba(255,255,255,0.85);
   border-radius: 28px;
   box-shadow: 0 6px 32px #2567b022, 0 2px 18px rgba(35, 72, 140, 0.11);
-  padding: 2.5em 2.5em 2em 2.5em;
+  padding: 2.5em;
   max-width: 900px;
   width: 97vw;
   margin: 2em auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); /* Suavizado del fondo */
   border: 2px solid #dff6fc;
   animation: fadeIn 0.7s;
   z-index: 2;
   position: relative;
 }
 
-/* TÍTULO RESPONSIVO Y GRANDE */
+/* Título principal grande y con sombra */
 .contacto-card h2 {
   color: #143c7d;
   font-weight: 800;
-  margin-bottom: 0.3em;
   letter-spacing: 0.06em;
   text-shadow: 0 2px 14px #4ad1ff1a;
   font-size: 3.2em;
 }
-@media (max-width: 900px) {
-  .contacto-card h2 {
-    font-size: 2.3em;
-  }
-}
-@media (max-width: 600px) {
-  .contacto-card h2 {
-    font-size: 1.5em;
-  }
-}
-@media (max-width: 400px) {
-  .contacto-card h2 {
-    font-size: 1.18em;
-  }
-}
 
+/* Tamaño de título en responsive */
+@media (max-width: 900px) { .contacto-card h2 { font-size: 2.3em; } }
+@media (max-width: 600px) { .contacto-card h2 { font-size: 1.5em; } }
+@media (max-width: 400px) { .contacto-card h2 { font-size: 1.18em; } }
+
+/* Descripción debajo del título */
 .contacto-descripcion {
   font-size: 1.13em;
   margin-bottom: 1.7em;
@@ -164,13 +164,9 @@ main {
   text-align: center;
   line-height: 1.5;
   background: transparent !important;
-  border-radius: 9px;
-  padding: 0.7em 2em;
-  box-shadow: none !important;
-  border: none !important;
 }
 
-/* GRID */
+/* Grid para dividir info y formulario */
 .contacto-grid {
   display: flex;
   gap: 2.5em;
@@ -180,53 +176,33 @@ main {
   flex-wrap: wrap;
 }
 
-/* INFO BONITO Y RESPONSIVO */
+/* ------------ COLUMNA DE INFORMACIÓN DE CONTACTO ------------ */
 .contacto-info {
   flex: 1 1 290px;
   min-width: 220px;
-  margin-bottom: 1em;
   background: #fff;
   border-radius: 18px;
-  padding: 1.2em 1.3em 1.1em 1.3em;
-  box-shadow: 0 4px 24px #2567b022, 0 2px 12px #4ad1ff18;
+  padding: 1.2em;
+  box-shadow: 0 4px 24px #2567b022;
   border: 1.5px solid #dff6fc;
   display: flex;
   flex-direction: column;
   gap: 1.1em;
-  transition: box-shadow 0.2s, border-color 0.2s;
 }
 .contacto-info p {
-  margin-bottom: 0;
   font-size: 1.08em;
   display: flex;
   align-items: center;
   gap: 0.7em;
   color: #143c7d;
-  letter-spacing: 0.01em;
-  word-break: break-word;
-}
-.contacto-info p strong {
-  white-space: nowrap;
-  display: inline-block;
 }
 .contacto-info i {
   color: #2567B0;
   min-width: 22px;
   font-size: 1.2em;
 }
-.contacto-info a, .contacto-social a {
-  color: #1586bb;
-  font-weight: 500;
-  word-break: break-all;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.contacto-info a:hover, .contacto-social a:hover {
-  color: #2567B0;
-  text-decoration: underline;
-}
 
-/* Redes sociales bonito */
+/* Redes Sociales */
 .contacto-social {
   margin-top: 1.1em;
   padding-top: 0.6em;
@@ -235,12 +211,6 @@ main {
   flex-direction: column;
   gap: 0.6em;
 }
-.contacto-social p {
-  margin-bottom: 0.1em;
-  font-weight: 600;
-  color: #1586bb;
-  font-size: 1.03em;
-}
 .contacto-social ul {
   list-style: none;
   padding-left: 0;
@@ -248,59 +218,44 @@ main {
   gap: 1em;
   flex-wrap: wrap;
 }
-.contacto-social li {
-  margin-bottom: 0;
-}
 .contacto-social a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 3px 12px 3px 8px;
+  padding: 3px 12px;
   background: #e3f6ff55;
   border-radius: 6px;
-  box-shadow: 0 1px 5px #4ad1ff12;
-  font-size: 1em;
   border-bottom: 1.5px dotted #4ad1ff;
-  transition: background 0.16s, color 0.2s;
 }
 .contacto-social a:hover {
   background: #4ad1ff;
   color: #fff;
-  border-bottom: none;
-  box-shadow: 0 2px 10px #1586bb33;
 }
 
-/* Formulario y mensaje en el mismo contenedor */
+/* ------------ COLUMNA DEL FORMULARIO ------------ */
 .formulario-contenedor {
   flex: 1 1 290px;
   min-width: 220px;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
   background: rgba(245, 252, 255, 0.75);
   border-radius: 14px;
   box-shadow: 0 2px 14px #4ad1ff10;
-  padding: 1em 0.5em 0.8em 0.5em;
+  padding: 1em 0.5em;
 }
 
-/* Formulario */
 .contacto-form {
   background: #f7fbff;
   border-radius: 14px;
   box-shadow: 0 1px 10px #0001;
-  padding: 1.8em 1.3em 1.2em 1.3em;
+  padding: 1.8em;
   display: flex;
   flex-direction: column;
   gap: 0.7em;
   animation: fadeIn 1.2s;
   min-height: 370px;
 }
-.contacto-form label {
-  font-weight: 600;
-  color: #1586bb;
-  margin-bottom: 0.2em;
-  letter-spacing: 0.02em;
-}
+
 .contacto-form input,
 .contacto-form textarea {
   font-family: inherit;
@@ -309,21 +264,13 @@ main {
   border: 1.5px solid #b5ccf2;
   border-radius: 8px;
   background: #fafdff;
-  margin-bottom: 0.7em;
-  outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
 }
 .contacto-form input:focus,
 .contacto-form textarea:focus {
   border-color: #4ad1ff;
   box-shadow: 0 0 6px #4ad1ff88;
-  background: #f7fdff;
 }
-.contacto-form textarea {
-  resize: vertical;
-  min-height: 80px;
-  max-height: 220px;
-}
+
 .contacto-form button {
   background: linear-gradient(90deg, #2567B0 60%, #4ad1ff 100%);
   color: #fff;
@@ -334,21 +281,15 @@ main {
   padding: 0.7em 0;
   cursor: pointer;
   box-shadow: 0 2px 10px #2567B033;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   margin-top: 1em;
   letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6em;
 }
 .contacto-form button:hover {
   background: linear-gradient(90deg, #1586bb 60%, #4ad1ff 100%);
   transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 4px 16px #4ad1ff33;
 }
 
-/* Mensaje debajo del formulario, OCULTO por defecto y solo aparece cuando hay mensaje */
+/* ------------ MENSAJE DE ÉXITO O ERROR DESPUÉS DE ENVIAR ------------ */
 .mensaje-exito {
   margin-top: 1.2em;
   min-height: 40px;
@@ -356,31 +297,25 @@ main {
   color: #0e3c61;
   border: 2px solid #35c3ff;
   border-radius: 9px;
-  padding: 1em 1.5em;
+  padding: 1em;
   font-size: 1.16em;
   text-align: center;
-  box-shadow: 0 4px 24px #35c3ff33;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: background 0.3s, color 0.3s, border 0.3s;
   display: none;
 }
-.mensaje-exito.mostrar {
-  display: block !important;
-}
+.mensaje-exito.mostrar { display: block !important; }
 .mensaje-exito.error {
   background: linear-gradient(90deg, #ffe3e3 0%, #ffe6c7 100%);
   color: #b12a2a;
   border-color: #ff7d7d;
-  box-shadow: 0 4px 24px #ff7d7d33;
 }
 
+/* ------------ ANIMACIÓN DE ENTRADA ------------ */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px);}
   to { opacity: 1; transform: none;}
 }
 
-/* Burbujas decorativas */
+/* ------------ BURBUJAS DECORATIVAS DE FONDO ------------ */
 .bubbles {
   position: absolute;
   bottom: 10px;
@@ -397,34 +332,14 @@ main {
   bottom: -80px;
   background: rgba(74,209,255,0.32);
   border-radius: 50%;
-  opacity: 0.95;
   animation: bubbleUp 9s linear infinite;
 }
-.bubble:nth-child(1) {
-  left: 12%;
-  width: 64px; height: 64px;
-  animation-delay: 0s;
-}
-.bubble:nth-child(2) {
-  left: 40%;
-  width: 40px; height: 40px;
-  animation-delay: 2s;
-}
-.bubble:nth-child(3) {
-  left: 76%;
-  width: 54px; height: 54px;
-  animation-delay: 1.2s;
-}
-.bubble:nth-child(4) {
-  left: 30%;
-  width: 32px; height: 32px;
-  animation-delay: 3.2s;
-}
-.bubble:nth-child(5) {
-  left: 60%;
-  width: 70px; height: 70px;
-  animation-delay: 4s;
-}
+.bubble:nth-child(1) { left: 12%; width: 64px; height: 64px; animation-delay: 0s; }
+.bubble:nth-child(2) { left: 40%; width: 40px; height: 40px; animation-delay: 2s; }
+.bubble:nth-child(3) { left: 76%; width: 54px; height: 54px; animation-delay: 1.2s; }
+.bubble:nth-child(4) { left: 30%; width: 32px; height: 32px; animation-delay: 3.2s; }
+.bubble:nth-child(5) { left: 60%; width: 70px; height: 70px; animation-delay: 4s; }
+
 @keyframes bubbleUp {
   0% { transform: translateY(0) scale(1); opacity: 0.85; }
   30% { opacity: 1; }
@@ -432,10 +347,9 @@ main {
   100% { transform: translateY(-700px) scale(1.2); opacity: 0; }
 }
 
-/* FOOTER igual al de NOTICIAS/HOME */
+/* ------------ FOOTER ------------ */
 footer {
   width: 100%;
-  background: none;
 }
 .footer-bar {
   background: #092e72;
@@ -446,97 +360,30 @@ footer {
   align-items: center;
   gap: 8px;
 }
-.footer-logos {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  margin-bottom: 8px;
-}
 .footer-logos img {
   height: 54px;
   width: 108px;
   object-fit: contain;
-  background: none;
-  border-radius: 0;
-  box-shadow: none;
-  border: none;
-  padding: 0;
-  display: block;
 }
 .footer-text {
   font-size: 0.97rem;
-  letter-spacing: 1px;
   color: #cce6ff;
   text-align: center;
 }
 
-/* ------- RESPONSIVE BONITO PARA CELULAR --------- */
+/* ------------ MEDIA QUERIES para móviles ------------ */
 @media (max-width: 900px) {
   .contacto-card { padding: 1.5em 0.6em; }
-  .contacto-grid { flex-direction: column; gap: 1.5em; align-items: stretch;}
-  .contacto-info, .formulario-contenedor { min-width: 0; }
+  .contacto-grid { flex-direction: column; gap: 1.5em; align-items: stretch; }
   .footer-logos img { height: 54px; width: 108px; }
-  .footer-text { font-size: 0.91rem; }
-  .contacto-social ul {
-    flex-direction: column;
-    gap: 0.5em;
-  }
-  .contacto-info {
-    padding: 1em 0.6em;
-    border-radius: 14px;
-    font-size: 0.98em;
-    gap: 0.7em;
-  }
 }
-
 @media (max-width: 600px) {
   .contacto-card { padding: 0.8em 0.2em; }
   .contacto-grid { gap: 1em; }
   .contacto-card h2 { font-size: 1.5em; }
-  .contacto-descripcion { padding: 0.4em 0.5em; font-size: 0.98em;}
-  .formulario-contenedor, .contacto-info {
-    padding: 0.8em 0.3em;
-    font-size: 0.98em;
-  }
-  .contacto-form {
-    padding: 1.1em 0.6em 0.9em 0.6em;
-    min-height: 0;
-    font-size: 0.97em;
-  }
-  .contacto-form input,
-  .contacto-form textarea {
-    font-size: 1em;
-    padding: 0.45em 0.7em;
-  }
-  .contacto-form button {
-    font-size: 1em;
-    padding: 0.7em 0.2em;
-  }
-  .contacto-info p,
-  .contacto-social a {
-    font-size: 0.98em;
-  }
   .footer-logos img { height: 40px; width: 80px; }
-  .footer-text { font-size: 0.91rem; }
 }
-
 @media (max-width: 400px) {
   .contacto-card { padding: 0.4em 0.1em; }
-  .contacto-form { padding: 0.7em 0.3em; }
   .footer-logos img { height: 28px; width: 56px; }
-  .contacto-form input,
-  .contacto-form textarea {
-    font-size: 0.96em;
-    padding: 0.32em 0.3em;
-  }
-  .contacto-form button {
-    font-size: 0.98em;
-    padding: 0.7em 0.1em;
-  }
-  .contacto-info {
-    padding: 0.7em 0.1em;
-    border-radius: 10px;
-    font-size: 0.96em;
-    gap: 0.5em;
-  }
 }

@@ -54,12 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
       fecha: "01 de Febrero 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481985924_572944875780754_782459568704490221_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gFWxl4YHTI0Q7kNvwH3y0nn&_nc_oc=Adn5_uWvIjMuSP14NwBPd7LerbxHVgrQbRXMYfoH45UHiho9hqxVkD5bvZgq8y411McKX1lIZ_tdyFSQA2qYovpD&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=6z3GLbYY86Fsq9ez9Ah48g&oh=00_AfPoerzogDS_yD_I9jrqgDoXPBswvFwkK6SEAmekbkOWKA&oe=6862130D",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481985924_572944875780754_782459568704490221_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEtpkxUeHPpJkcWaA3PyDG-NpXwFpADxjE2lfAWkAPGMQjwSAja9hsnj7Hpb9m-0ecwQtYxqVmkNbAeOYFUBJdZ&_nc_ohc=TKexcFIaZ88Q7kNvwGWpjrF&_nc_oc=Adm2GaiFH35kwukoGQel6HH_EQkLYVEuOFLm5LVs512eDy-TNVV0UW0l0JydFQQ2MnY51b8B9r42zy_UEFAmvZ1V&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=gRsDzj2u2ZyXI5VQLrnnLg&oh=00_AfOLFrl1uBjoxAyfmR0mV5Tmw-KPWQhhLf5avw3L951W7g&oe=686DF08D",
       titulo: "Los empresarios de Aguascalientes tienen la capacidad y fortaleza para enfrentar los retos y desafíos del 2025: CEEA.",
       fecha: "14 de Enero 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/482303519_572873712454537_1604038815095986070_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=OZbPpEpwilYQ7kNvwGO8MuJ&_nc_oc=AdmmL7VR1uLmmyYCi7jzBrkBwc_QhSc16kCoxTN7zcQR1k2Yj7Kh6k2cYlEvKcQ1fVNKSrQPaNQBzM0XEKw1enQM&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=M6ZumDY6JRyePeSVXAedEg&oh=00_AfOmpg0V4LahbzVoxPRgooesfZ1i_rSchbwQDzmbsCvJSQ&oe=68620B28",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/482303519_572873712454537_1604038815095986070_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGfq-Au-KUjxEhHvdtZ9zUi3cDbR2th1rndwNtHa2HWuaj0cw4m9QpuTsBo_gb1xndaLlKOqasq5V19-bhmP-Ry&_nc_ohc=RMKjL-D68L4Q7kNvwHmWIU7&_nc_oc=Adl8qajz5w_GPIhoQE9u3GHE-kY3ZOuUm1sGnhRD6HkXAu3gupwhJTGFppbONzuH-RlvmCBi105oDtjhvaIyjXXA&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=eP8h6nnHcv-8YPskX3HC-w&oh=00_AfOgceHm-SzoQA5KpcObnzdaAs4rsu8qLU-R0HbmQeZJ0A&oe=686E20E8",
       titulo: "Inició la Semana del Contador 2024.",
       fecha: "03 de Diciembre 2024"
     },

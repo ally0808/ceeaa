@@ -1,22 +1,41 @@
 <!DOCTYPE html>
+<!-- Indica que el documento es HTML5 -->
+
 <html lang="es">
+<!-- El idioma principal del contenido es español -->
+
 <head>
-  <link rel="icon" href="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/342176173_203975092380751_2564658307533656109_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGCsh4LPU5lb0uSBXjHr8vgqUarP4JuhpKpRqs_gm6GkgUzNds1ZTuDURIkSdmvhcvuxet8JhLjx_G7mtrsXci2&_nc_ohc=Od4HmQ8VYZQQ7kNvwHeuOZ9&_nc_oc=AdmfWsfrh16l9-tGCIYy9jdmDD6FCR4jw8p5F4ZYgPpUgwgi5JtCf5IvJjfxSyIKevYYr2Mc_ACB1C3ki5HF64pi&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=rk-P2vIcwM96rmfYvbfCcQ&oh=00_AfNlr-aM_cZKnzGMXTPvmzyByL0BuOQD7F21dE_2hw2kaQ&oe=685BCA14" type="image/png" />
+  <!-- Favicon: Icono que aparece en la pestaña del navegador -->
+  <link rel="icon" href="https://scontent.fagu3-1.fna.fbcdn.net/..." type="image/png" />
+
+  <!-- Codificación de caracteres para admitir acentos y caracteres especiales -->
   <meta charset="UTF-8">
+
+  <!-- Hace que la página sea responsive en móviles y tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Título que aparece en la pestaña del navegador -->
   <title>CEEA - Consejo Estatal Empresarial de Aguascalientes</title>
+
+  <!-- Archivo CSS local para los estilos de la página -->
   <link rel="stylesheet" href="inicio.css">
+
+  <!-- Librería externa de iconos (FontAwesome) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
-  <!-- NAVBAR -->
+
+  <!-- NAVBAR: Barra de navegación superior -->
   <nav class="navbar-bg">
     <div class="navbar-mini-container">
-      <!-- Botón hamburguesa mejorado -->
+      <!-- Botón hamburguesa para abrir/cerrar el menú en pantallas pequeñas -->
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-        <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-xmark"></i>
+        <i class="fa-solid fa-bars"></i> <!-- Icono de menú (barras) -->
+        <i class="fa-solid fa-xmark"></i> <!-- Icono de cerrar (equis) -->
       </button>
+
+      <!-- Lista de enlaces del menú de navegación -->
       <ul class="nav-list" id="navbarList">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="objetivos.html">Objetivos</a></li>
@@ -27,20 +46,28 @@
       </ul>
     </div>
   </nav>
-  <!-- HERO SECTION -->
+
+  <!-- HERO SECTION: Sección principal de bienvenida -->
   <section class="hero">
     <div class="hero-inner">
+      <!-- Contenedor del logo animado -->
       <div class="logo-anim-container">
         <img class="logo-hero pulse" src="https://i.pinimg.com/736x/5c/d6/d1/5cd6d1ffe4b5259513ebf8f526fb3850.jpg" alt="Logo CEEA">
       </div>
+
+      <!-- Títulos principales de la página -->
       <div class="hero-titles fade-in-up">
         <h2>Bienvenido al <span class="highlight-ceea">CEEA</span></h2>
         <h1>Consejo Estatal Empresarial de Aguascalientes</h1>
       </div>
+
+      <!-- Texto descriptivo de la organización -->
       <p class="hero-desc fade-in-up delay-1">
         El CEEA articula esfuerzos entre empresas, instituciones y gobierno para asegurar un entorno de progreso y estabilidad.<br>
         Promovemos iniciativas que fortalezcan el tejido empresarial, la competitividad y la paz laboral en nuestra región.
       </p>
+
+      <!-- Botones de acción (CTA) -->
       <div class="hero-buttons fade-in-up delay-2">
         <a href="objetivos.html" class="btn-accion">
           <i class="fas fa-bullseye"></i> Nuestros Objetivos
@@ -50,7 +77,8 @@
         </a>
       </div>
     </div>
-    <!-- Decoración animada -->
+
+    <!-- Burbujas decorativas animadas en el fondo -->
     <div class="bubbles">
       <div class="bubble"></div>
       <div class="bubble"></div>
@@ -59,18 +87,25 @@
       <div class="bubble"></div>
     </div>
   </section>
-  <!-- FOOTER -->
+
+  <!-- FOOTER: Pie de página -->
   <footer>
     <div class="footer-bar">
+      <!-- Logos de organizaciones o patrocinadores -->
       <div class="footer-logos">
-        <img src="https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/277764273_100534895972778_4399351863634102879_n.png?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=erVzc6NxJDAQ7kNvwFzd9K_&_nc_oc=AdkmQbTaWnzekK8rIgO5cU_jFmGZ-pu2zwkroeQdv1maeBo6o6iExk56SioTb9U5sNnBANOCfHobbJwEfHO0tzEh&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=pUHJVLCOfYopUehxJhFO8g&oh=00_AfNDv0kPMNHwbh18CzkZ54DendjT3WngX0Cle44pKKhjIA&oe=68612438" alt="AGS EI" class="logo-ags">
-        <img src="https://static.wixstatic.com/media/e26601_938afa7daacc48428d7f81b7327da453~mv2.png/v1/crop/x_0,y_1,w_390,h_184/fill/w_108,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/White%20investel.png" alt="Investel" class="logo-investel">
+        <img src="img/logo.png" alt="AGS EI" width="400">
+        <img src="img/Investel.png" alt="Investel" width="400">
       </div>
+
+      <!-- Texto de derechos reservados -->
       <div class="footer-text">
         2025 Consejo Estatal Empresarial de Aguascalientes &copy;
       </div>
     </div>
   </footer>
+
+  <!-- Archivo JavaScript para controlar el menú hamburguesa -->
   <script src="menu.js"></script>
 </body>
+
 </html>
