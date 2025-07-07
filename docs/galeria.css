@@ -319,11 +319,19 @@ footer { width: 100%; }
   width: 108px !important;
   object-fit: contain;
 }
+
 .footer-text {
   font-size: 0.97rem;
   letter-spacing: 2px;
   color: #cce6ff;
   text-align: center;
+}
+
+.logo {
+  background-image: url('../img/logo.png');
+  width: 200px;
+  height: 200px;
+  background-size: cover;
 }
 
 /* MEDIA QUERIES (responsive) */

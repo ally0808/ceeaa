@@ -360,6 +360,7 @@ footer {
   align-items: center;
   gap: 8px;
 }
+
 .footer-logos img {
   height: 54px !important;
   width: 108px !important;
@@ -371,6 +372,13 @@ footer {
   letter-spacing: 2px;
   color: #cce6ff;
   text-align: center;
+}
+
+.logo {
+  background-image: url('../img/logo.png');
+  width: 200px;
+  height: 200px;
+  background-size: cover;
 }
 
 /* ------------ MEDIA QUERIES para móviles ------------ */
