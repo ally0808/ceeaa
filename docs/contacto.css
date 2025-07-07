@@ -361,12 +361,14 @@ footer {
   gap: 8px;
 }
 .footer-logos img {
-  height: 54px;
-  width: 108px;
+  height: 54px !important;
+  width: 108px !important;
   object-fit: contain;
 }
+
 .footer-text {
   font-size: 0.97rem;
+  letter-spacing: 1px;
   color: #cce6ff;
   text-align: center;
 }

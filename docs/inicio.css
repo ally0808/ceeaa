@@ -363,17 +363,18 @@ footer {
 }
 
 .footer-logos img {
-  height: 54px;
-  width: 108px;
+  height: 54px !important;
+  width: 108px !important;
   object-fit: contain;
 }
 
 .footer-text {
   font-size: 0.97rem;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   color: #cce6ff;
   text-align: center;
 }
+
 .logo {
   background-image: url('../img/logo.png');
   width: 200px;
@@ -395,5 +396,5 @@ footer {
 }
 
 @media (max-width: 400px) {
-  .footer-logos img { height: 28px; width: 56px; }
+  .footer-logos img { height: 40px; width: 80px; }
 }
