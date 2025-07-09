@@ -3,15 +3,12 @@ const cors = require('cors');
 const path = require('path');
 require('dotenv').config();
 
-// Conexión a MongoDB
-require('./mongo');
-
 // Modelos
 const Objetivo = require('./models/Objetivo');
 const Comite = require('./models/Comite');
 const Noticia = require('./models/Noticia');
 const Contacto = require('./models/Contacto');
-const Galeria = require('./models/Galeria'); // ✅ MOVER AQUÍ ARRIBA
+require('./mongo');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -28,9 +25,7 @@ app.use(express.urlencoded({ extended: true }));
 // Si tienes imágenes o archivos estáticos
 app.use('/imagenes', express.static(path.join(__dirname, 'imagenes')));
 
-//
 // ---- RUTAS API ----
-//
 
 // Objetivos
 app.get('/api/objetivos', async (req, res) => {
@@ -78,17 +73,7 @@ app.post('/api/contacto', async (req, res) => {
   }
 });
 
-// ✅ NUEVA RUTA: Galería
-app.get('/api/galeria', async (req, res) => {
-  try {
-    const imagenes = await Galeria.find();
-    res.json(imagenes);
-  } catch (err) {
-    res.status(500).json({ error: 'Error al obtener galería' });
-  }
-});
-
-// Ruta base para comprobar que Render está funcionando
+// Ruta base para probar que Render está vivo
 app.get('/', (req, res) => {
   res.send('✅ Backend CEEAA funcionando');
 });
