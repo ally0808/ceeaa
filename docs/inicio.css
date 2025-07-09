@@ -7,35 +7,34 @@
 
 /* Estilo general del cuerpo de la página */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif; /* Fuente de texto */
-  background: #f4f4f4; /* Color de fondo base (gris claro) */
-  color: #222; /* Color de texto */
-  min-height: 100vh; /* Altura mínima igual a la altura de la pantalla */
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 /* NAVBAR y CONTENEDOR DEL MENÚ */
 .navbar-bg {
-  background: #143c7d; /* Azul oscuro */
+  background: #143c7d;
   width: 100%;
 }
 
 .navbar-mini-container {
-  background: #092e72; /* Azul más oscuro */
+  background: #092e72;
   display: flex;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  border-radius: 0 0 12px 12px; /* Bordes redondeados abajo */
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 12px 12px;
   width: 100%;
   height: 54px;
-  box-shadow: 0 2px 8px rgba(20, 60, 125, 0.07); /* Sombra leve abajo */
+  box-shadow: 0 2px 8px rgba(20, 60, 125, 0.07);
   position: relative;
 }
 
-/* BOTÓN HAMBURGUESA (solo visible en móvil) */
 .menu-toggle {
-  display: none; /* Oculto por defecto (solo se ve en móviles) */
+  display: none;
   background: none;
   border: none;
   outline: none;
@@ -48,15 +47,15 @@ body {
   cursor: pointer;
   transition: color 0.2s;
 }
+
 .menu-toggle.open {
-  color: #4ad1ff; /* Cambia color al abrir el menú */
+  color: #4ad1ff;
 }
-/* Alterna entre ícono de abrir (barras) y cerrar (X) */
+
 .menu-toggle .fa-xmark { display: none; }
 .menu-toggle.open .fa-bars { display: none; }
 .menu-toggle.open .fa-xmark { display: inline; }
 
-/* LISTA DEL MENÚ */
 .nav-list {
   list-style: none;
   display: flex;
@@ -82,11 +81,11 @@ body {
 
 .nav-list li a:hover,
 .nav-list li a.active {
-  background: #4ad1ff; /* Fondo azul claro al pasar el mouse o cuando está activo */
-  color: #143c7d; /* Texto azul oscuro */
+  background: #4ad1ff;
+  color: #143c7d;
 }
 
-/* NAVBAR RESPONSIVO (Móviles) */
+/* NAVBAR RESPONSIVO */
 @media (max-width: 700px) {
   .navbar-mini-container {
     height: 54px;
@@ -94,7 +93,7 @@ body {
     position: relative;
   }
   .menu-toggle {
-    display: block; /* Ahora sí se muestra el botón hamburguesa */
+    display: block;
   }
   .nav-list {
     flex-direction: column;
@@ -104,7 +103,7 @@ body {
     left: 0;
     width: 100vw;
     padding: 0;
-    max-height: 0; /* Oculto por defecto */
+    max-height: 0;
     overflow: hidden;
     background: #092e72;
     backdrop-filter: blur(7px);
@@ -115,7 +114,7 @@ body {
     gap: 0;
   }
   .nav-list.open {
-    max-height: 320px; /* Altura al abrir */
+    max-height: 320px;
     padding: 4px 0 8px;
   }
   .nav-list li {
@@ -138,7 +137,7 @@ body {
   }
 }
 
-/* HERO SECTION: Sección de bienvenida */
+/* HERO SECTION */
 .hero {
   background: linear-gradient(180deg, #143c7d 0%, #6fd4ff 100%);
   color: #fff;
@@ -190,6 +189,7 @@ body {
   opacity: 0;
   animation: fadeInUp 0.85s forwards;
 }
+
 .fade-in-up.delay-1 { animation-delay: 0.3s; }
 .fade-in-up.delay-2 { animation-delay: 0.6s; }
 
@@ -303,7 +303,7 @@ body {
   color: #0a2c62;
 }
 
-/* BURBUJAS decorativas en el fondo */
+/* BURBUJAS decorativas */
 .bubbles {
   position: absolute;
   bottom: 10px;
@@ -325,14 +325,12 @@ body {
   animation: bubbleUp 9s linear infinite;
 }
 
-/* Tamaño y posición de cada burbuja */
 .bubble:nth-child(1) { left: 12%; width: 64px; height: 64px; animation-delay: 0s; }
 .bubble:nth-child(2) { left: 40%; width: 40px; height: 40px; animation-delay: 2s; }
 .bubble:nth-child(3) { left: 76%; width: 54px; height: 54px; animation-delay: 1.2s; }
 .bubble:nth-child(4) { left: 30%; width: 32px; height: 32px; animation-delay: 3.2s; }
 .bubble:nth-child(5) { left: 60%; width: 70px; height: 70px; animation-delay: 4s; }
 
-/* Animación de subida de burbujas */
 @keyframes bubbleUp {
   0% { transform: translateY(0) scale(1); opacity: 0.85; }
   30% { opacity: 1; }
@@ -340,7 +338,7 @@ body {
   100% { transform: translateY(-700px) scale(1.2); opacity: 0; }
 }
 
-/* FOOTER: Pie de página */
+/* FOOTER corregido */
 footer {
   width: 100%;
 }
@@ -363,8 +361,8 @@ footer {
 }
 
 .footer-logos img {
-  height: 54px !important;
-  width: 108px !important;
+  height: 60px;
+  width: 120px;
   object-fit: contain;
 }
 
@@ -375,15 +373,7 @@ footer {
   text-align: center;
 }
 
-.logo {
-  background-image: url('../img/logo.png');
-  background-image: url('../img/Investel.png');
-  width: 200px;
-  height: 200px;
-  background-size: cover;
-}
-
-/* RESPONSIVE: Ajustes de tamaño en móvil y tablet */
+/* RESPONSIVE para logos */
 @media (max-width: 900px) {
   .hero-inner { max-width: 98vw; padding: 1.3em 0.2em 1.2em; }
   .hero-desc { font-size: 1.01rem; padding: 13px 5px 11px; }
@@ -393,7 +383,8 @@ footer {
 @media (max-width: 600px) {
   .hero-titles h2 { font-size: 1.07em; }
   .hero-titles h1 { font-size: 1.07em; }
-  .footer-logos img { height: 40px; width: 80px; }
+  .footer-logos { gap: 16px; }
+  .footer-logos img { height: 44px; width: 88px; }
 }
 
 @media (max-width: 400px) {
