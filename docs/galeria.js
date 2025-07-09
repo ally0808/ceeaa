@@ -4,62 +4,62 @@ document.addEventListener("DOMContentLoaded", function () {
   // Tus eventos originales (puedes agregar/quitar aquí)
   const eventos = [
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/504849305_644380141970560_6797082119034026719_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=UlFj67r4FT8Q7kNvwFTgWVQ&_nc_oc=AdkT-InBSYojccuELfjtLxkv4epPNjfQeaNmshvKld6zzgzGFnALWY856uNrGAHwb65hTOqJXuRTYqhPARMwofws&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=aeLr-SDj0U4mAadYrxDIkg&oh=00_AfNUyQi7sdO4F1Zkl1x4-gvjqHgsUIph5CwyEd1Ord4zvA&oe=686200C1",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/504849305_644380141970560_6797082119034026719_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGbZZokr2gmIXTNPormkjKKFxAA-Q9ZX6kXEAD5D1lfqRUMy3f0lEj4BBwh_AzK2zosl58ky3XJZn6M6svPNgnb&_nc_ohc=VrvZuSJi4IAQ7kNvwGeHg1u&_nc_oc=AdkWWzQrryUxJ639JXD5dIYo5vXAOQW6TXBJtzDknBFSdC0nSboOc6Pzi1tCfyRtnepvytGiULwSNbMLDRyR2WAQ&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=N3iT4L8NBLo0GIQt5SxKmg&oh=00_AfS1nyFGR5wUZkveb2tEeN8BMcno15DaOAGbCWAxcRB8Kg&oe=6874AE01",
       titulo: "Urgente que el gobierno federal voltee a ver Aguascalientes: CEEA",
       fecha: "10 de Junio 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/492190590_605035295905045_9043277596684626273_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=xsvO09hQ1CsQ7kNvwEzBWXy&_nc_oc=AdnolREA4qHqbrjJvJlfL4_mbHEgXfISBY9bWE1130NaJwx6KP7toOZXYvoNuZSIck0eFa_XHotKH-Y_9RYlf1s4&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=hKWOG4orv6aPna0oAdIgAw&oh=00_AfMOKM9v2NMgwY6rI2U1xFcJHy4MO3Ym7Leiu72web4gbw&oe=68621F03",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/492190590_605035295905045_9043277596684626273_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFWchEGh4hnobkTlQpYgidR4rHkGgas1UPiseQaBqzVQwF_i1fZak3ft0aJX0L7yEDC-Soa7kaGg-npOL0vt1e6&_nc_ohc=llW3_b2hvI4Q7kNvwGLRVy-&_nc_oc=AdmvssmimGLmPUEYVodlpgMX_TJz_4e4Qo7DWY29Q6Cv5N9e8Fx53-awXOayx0TdMJtYiqmzizpzMciMDQpz8dGk&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=vGnhqIQBy8qW8le5fIj3cA&oh=00_AfSYhJBMdGdBUes0zTP56XC8CTbFBYerWDCJn43wqC-LmQ&oe=6874CC43",
       titulo: "Viajar Seguro a la Feria de San Marcos 2025: Transportistas Lanzan Operativo Especial",
       fecha: "18 de Abril 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/491939019_603503506058224_8581665580798598176_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gprIopKTm5IQ7kNvwG9iAuO&_nc_oc=Adkx9IZP3wzb95G1AUeSi4TglFVhC2X0V-snUgxnzAO7YedF23CTk4tIQl1UABbVcIUifjtwdkonj40eY39Nyd8Z&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=pOb9CMlW79plwiz6kCLj1w&oh=00_AfMO1-tqZ3S1VOg2MpeSMIxQnixC-Dwnhq1gW9MDlrcigw&oe=6861F9B7",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/491939019_603503506058224_8581665580798598176_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG145GAZHv9OLfzyXhwLHLAyrWvAgJJzUzKta8CAknNTF7Nm0cpKm-MiuqHFGpY99Ju-zL9UuhP3kuWXbEw1pr3&_nc_ohc=b-61sYUNvVQQ7kNvwGzWoM4&_nc_oc=AdkhoqDLA0djeqGpuPAqxFZgZolQ7JuNP5qXxup3DA4KEKuBSkLX1v1wBEcfIUZWhqTplbqAGbhLcj6mWwlZP3bQ&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=fWNg4Zw4RmxXOOG49Z4UGw&oh=00_AfQTWkc0qI7HA7UZ6-W-LssFzesMXseMMvowyH2ZbCPJog&oe=6874A6F7",
       titulo: "El CEEA Se Pronuncia por una Elección Informada de Juzgadores en México",
       fecha: "16 de Abril 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/489433164_597099523365289_7898538788796945129_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=S8rduYadidAQ7kNvwE3T0bK&_nc_oc=AdkDGLACIV9ILARt4Rn-ZdfUTGwYU_YfT6ERtH_8sMSpr25HX3k0UwuF_vchT8FXiiPOAoNLBd8bYMLCTLXcs-QK&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=LFLldgkgx8N_evH76HPhdQ&oh=00_AfN53atzyQi8tu5RSIzyZ9JlZNiTsAo0MZv5ZMp24EF3yw&oe=68623017",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/489433164_597099523365289_7898538788796945129_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFiXdVH2tneRR4K5JICkNlOFq62ViIFtOYWrrZWIgW05pITNUP8wq8uMmWoWEU1mcPWovZGmFVNV7UZDfQoc8ce&_nc_ohc=XRh7X-8FOncQ7kNvwG_UfZJ&_nc_oc=AdkU398KdONE-VArrp9FftvyPccdnY-67eeTip3cawRmf3Xcg5VdN5fDU9JSCuP8yru-K4fVn3BnjGFPy2UY-Wyy&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=1hGqnkZY6ssN51bZ0rDIag&oh=00_AfRwhPD2TmI1N-8azZnh5qX2kPyi6j_SBkA3p_rNZAxQYw&oe=6874A517",
       titulo: "El CEEA cierra filas por una feria 100% segura",
       fecha: "08 de Abril 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/496004947_1236559725144933_7308817332838522235_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=WEgI_iyyI5sQ7kNvwGpX1gZ&_nc_oc=AdkWgqQuT3x9cwxg9zd_6GjJDzxwbo0c_0o3R7rKQa75EhyaQzKuzWdBc8FwyujBA10mIf04DuBM4UkX7q_d2LZz&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=fqqPigVlp5QbxOzMSRVgww&oh=00_AfNL1EDJsMCO-m3KXsC6BcBFV2WDlXOaNPpsP-v4Fef3qw&oe=686212BA",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/496004947_1236559725144933_7308817332838522235_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeG9GEQSlG5EbKaJ7_Be8KurbIgyCqmJWQFsiDIKqYlZAU6Up60XJpY-vZefn6CsB8ZbjGtzYHy-8HSHeOg28Aqk&_nc_ohc=MeF5mP1xtoAQ7kNvwFq2pDY&_nc_oc=AdmQGuxfLghuYC-lDYQMTByDKbKQptFd_rNP3s3Z1PtKMeFLYY6DAnztpBfgPGBMUSniDrfbtMdynv0-qufuUqho&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=GCSEphH1YyGyU4Q2ohHAdQ&oh=00_AfQID1oezcoeAGPxTgWwbMtA3_L3PghUUdFoV1Ik74W7WQ&oe=6874BFFA",
       titulo: "GIRAA Da la Bienvenida a su Nueva Vicepresidenta: Carolina Ponce Asume el Cargo",
       fecha: "13 de Marzo 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/484091208_575217008886874_4501387254240386964_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=PYU6Xw5No7QQ7kNvwGJ8gN6&_nc_oc=Adk50RMs7lJ2KBF1LupTAINYbScx1S_USDsU895-Tl21uWct42ZzWuyzf2IqtFN3Kjzc_SYhdoPgxfhtAUBdxkXO&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=307CW-Gl1IbiT5h6S82Adw&oh=00_AfP2YFgnmxYFH56uYFCmvGJyQxRP65btRwB5-U2TAgiQBQ&oe=68620CF2",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/484091208_575217008886874_4501387254240386964_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHiqhVLAKCgO2YccvX172_plkqGNvBcJjGWSoY28FwmMR_Owjk8Qf3t2rosixHIrh8MhMsJ5DSIPEetcPNI3fWo&_nc_ohc=Dx_ixZfJK5AQ7kNvwF34xeS&_nc_oc=Admnqehnja7wSYfUQ-D4Q9POQzNzZFSeyqjRYkQUWRiKi-P8XGL5rXawQuaqL7jGf9brqLBLe9JY0KBzPzQ6xNNA&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=rbLnp_-bMIOM4iNfyyNFTw&oh=00_AfRwS_QI_F5sE3cCdGnHqUWr4EurlvQYX0-iglhW76L5OA&oe=6874BA32",
       titulo: "El CEEA Se Suma a la Campaña Nacional Contra la Corrupción y la Inseguridad",
       fecha: "11 de Marzo 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/483806998_575979768810598_1438490151524394419_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sThBvNqaASwQ7kNvwHpLtRP&_nc_oc=AdkqNMglXHtSpOw-69GEJT2rdFXBQ5Qi5FpeZpagrdzGVU-pdM-kUfORfCZljkV6INewJgqF_ck2PgQO2qF7ZD98&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=wXtvWppdJVPahJaHhgxMeg&oh=00_AfMHxWqZ85XfHE4e5wfuD-WdNMG57WyC9xwC0OpzI7OI4g&oe=6861FE62",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/483806998_575979768810598_1438490151524394419_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFgvanL7R9ETI9Q0nagSylFuW2bJ-UhuBK5bZsn5SG4EljJzU6FVkNYG45HvkcbN_SV8p2gNs_ls9pGtasjs4t9&_nc_ohc=PFvhrakXxQMQ7kNvwG3OaSb&_nc_oc=AdlTpQfBFk4ccua0D8i_NxeDMp0dMB6IXSESKWw61MsV6LV1IdcLxJRA8dJ4JLmWncThkCj6G8lgkHgulORi2Evn&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=d7sovJX2kzlqZdc9VDQjbQ&oh=00_AfT5XgjrfLh9YBm95u3NxuSmskDP2lWBQwM7UIzq7EWhAA&oe=6874ABA2",
       titulo: "El CEEA promueve la denuncia ciudadana para prevenir el delito",
       fecha: "11 de Febrero 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481994085_573081429100432_8289302445105742167_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=I2bAYZXN8AQQ7kNvwG8fcQ2&_nc_oc=AdljDADmEwPP4L01GbRQpO9JM4CHlUaZCm-0a8z5qTacNt0d1hmrNW3nXcpAh34KP83_zrelmGBuUaGjbortUrby&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=A430SCgTeMy0ZgxIZ9IBvg&oh=00_AfNk2F1Ug87bdOjGFFbaPF2-zU20mztqvmcPYlXZud9HWQ&oe=686212EC",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/482203547_573092015766040_1871465784854559755_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHLU_dv1d9O-6AyJcgN6DJTAX1hkshkbOABfWGSyGRs4PV4ZrDh56rMfutzPrUFiczfDWLlMK32vfbehulixK-6&_nc_ohc=MYvZsJe_9LsQ7kNvwHW4WUV&_nc_oc=AdmAEhgnndYGkBIb1LUZG3JSCl73FlJgwEYSRbFVHZemhmFI98KJn_K7ysyohWJZx6bm8H26K2LGHmwWE-rUrpwO&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=F1guv3LKFh11ejdjO1p1gw&oh=00_AfRGiMRaZ61x0RDFj-jczCDWA3wuwftWkz7rRM4hYxmIYA&oe=6874CD94",
       titulo: "El Vicepresidente  del Clúster Automotriz GIRAA Mel Wilhem, tomó protesta como parte del Comité Estatal de Educación Dual en Educación Media Superior... ¡Felicidades!.",
       fecha: "23 de Febrero 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/482203547_573092015766040_1871465784854559755_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=j2TXIqo6pUYQ7kNvwEBxpzS&_nc_oc=AdkZaiwZdjZrFrSm84rZXClcWaT9rqyuHcQCx6hi-Kqp_6Va1NVm8eMxyU2Zs7XoJoG_u6wSgcOy4e0wnggxHV6Q&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=OhwWBMCibL-hHtZzSGm75g&oh=00_AfOtoH7iMBsBUZO44FewYnBg7uB2FUee0ehy4qfqtzxOXg&oe=68622054",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481152949_573088722433036_6356192112832417906_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFp4zoMvk72s-80EFuR7RLk4yTsgyY8lcXjJOyDJjyVxaTF6z1FhGAHXKRC0yrOwPCkmvpELHuu2dQ7UCHSTTHc&_nc_ohc=OxckPWqacJwQ7kNvwG4851f&_nc_oc=AdkKBO3_n6RG0xw4-NKZLuDAMLFXomjM4dUQrdeBroQCjKO8-sw2FRcwIijiBqlmAZnKc8Rkcq2ZwlVX__pftaa2&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=ComqakJzLxVGCH7Q2v0qWg&oh=00_AfRklUk12o6vpjRLLazuJtcuIf52YtQpR7rtAYa3he2IUA&oe=6874ABFB",
       titulo: "LA UAA y GIRAA AC unen fuerzas para impulsar la innovación y el desarrollo en Aguascalientes.",
       fecha: "06 de Febrero 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481152949_573088722433036_6356192112832417906_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=NyDp3JsrGh0Q7kNvwHgwRE1&_nc_oc=AdmZP6nweh9lYRIoBwekZc2eh1oBPdc_YKIXoPu3IGGsVzez5bNUuesDl_ohNy_OiFZD5jV15TsjVMmxfDJZlGPD&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=pImr2K_x4JrQe0htbcXpaQ&oh=00_AfOaLdS7vYCFKJbD8W2iSw12VMvA-2sO2KYmcy5eGee8ow&oe=6861FEBB",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481985924_572944875780754_782459568704490221_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEtpkxUeHPpJkcWaA3PyDG-NpXwFpADxjE2lfAWkAPGMQjwSAja9hsnj7Hpb9m-0ecwQtYxqVmkNbAeOYFUBJdZ&_nc_ohc=rCqIbHeMNoQQ7kNvwERVL-j&_nc_oc=Adnu_2e1yPfTyJxZ1-f1Q_QggflivxfiVYnSUwi06KmK8wU-0Hy6vgLSP2ymYGo08jUNMFAqvQGAk2QwnCfgnUQV&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=zRoqMSxFRYU6PrfyRpqThw&oh=00_AfRlOep5nUdIv3L7ZjLHPqj1Mkvo5GqQow7N-Yw80dn_kw&oe=6874C04D",
       titulo: "CEEA Llama a Proteger la Feria Nacional de San Marcos como Patrimonio de Todos",
       fecha: "01 de Febrero 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/481985924_572944875780754_782459568704490221_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEtpkxUeHPpJkcWaA3PyDG-NpXwFpADxjE2lfAWkAPGMQjwSAja9hsnj7Hpb9m-0ecwQtYxqVmkNbAeOYFUBJdZ&_nc_ohc=TKexcFIaZ88Q7kNvwGWpjrF&_nc_oc=Adm2GaiFH35kwukoGQel6HH_EQkLYVEuOFLm5LVs512eDy-TNVV0UW0l0JydFQQ2MnY51b8B9r42zy_UEFAmvZ1V&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=gRsDzj2u2ZyXI5VQLrnnLg&oh=00_AfOLFrl1uBjoxAyfmR0mV5Tmw-KPWQhhLf5avw3L951W7g&oe=686DF08D",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/482303519_572873712454537_1604038815095986070_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGfq-Au-KUjxEhHvdtZ9zUi3cDbR2th1rndwNtHa2HWuaj0cw4m9QpuTsBo_gb1xndaLlKOqasq5V19-bhmP-Ry&_nc_ohc=vyCm4B7bDEsQ7kNvwEnhUdA&_nc_oc=AdmZ0GeXVTQdGNVlcrjOucvPZyDQO2c4NxcVhjCIsgfOnESoQawxn60L5-z74vH5VOKZ4NgzgCLDXSdjcYPETjcB&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=tj09owiNqvE_odNpRsRFSg&oh=00_AfSN7IhXb2MfJCh3VSSPHgbbcbzsH5e1P9W6KgZJ9zOkPQ&oe=6874B868",
       titulo: "Los empresarios de Aguascalientes tienen la capacidad y fortaleza para enfrentar los retos y desafíos del 2025: CEEA.",
       fecha: "14 de Enero 2025"
     },
     {
-      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/482303519_572873712454537_1604038815095986070_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGfq-Au-KUjxEhHvdtZ9zUi3cDbR2th1rndwNtHa2HWuaj0cw4m9QpuTsBo_gb1xndaLlKOqasq5V19-bhmP-Ry&_nc_ohc=RMKjL-D68L4Q7kNvwHmWIU7&_nc_oc=Adl8qajz5w_GPIhoQE9u3GHE-kY3ZOuUm1sGnhRD6HkXAu3gupwhJTGFppbONzuH-RlvmCBi105oDtjhvaIyjXXA&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=eP8h6nnHcv-8YPskX3HC-w&oh=00_AfOgceHm-SzoQA5KpcObnzdaAs4rsu8qLU-R0HbmQeZJ0A&oe=686E20E8",
+      src: "https://scontent.fagu3-1.fna.fbcdn.net/v/t39.30808-6/482343877_572475432494365_5439314634286706159_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF0IUPmKSGgYIvd6RmNMX2dnvdPplIPsbSe90-mUg-xtIwuRQwAdXhTCkXYOYhmNjpfky6J4mZazaGjUZtTXKU_&_nc_ohc=bIj92wxB-2QQ7kNvwGh-Ypy&_nc_oc=AdmeogB202zwxcIMSDIoxHKreDYX5RHUnvtalXO9ihOXb-QjSyk7pqg9jM180r1xE-vkfZLMQWTZm7Xd4brkSsin&_nc_zt=23&_nc_ht=scontent.fagu3-1.fna&_nc_gid=V_nIIwWa-yCHXV3295F50g&oh=00_AfSOmaH3ZcAtbWHbBxKgoJxOh7-x_lZasGf-oy1N7LlO1g&oe=6874B9CE",
       titulo: "Inició la Semana del Contador 2024.",
       fecha: "03 de Diciembre 2024"
     },
