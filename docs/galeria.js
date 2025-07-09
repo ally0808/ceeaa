@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const galeriaContainer = document.getElementById("galeria-container");
   galeriaContainer.innerHTML = "<p>Cargando imágenes...</p>";
 
-  fetch('https://TU-BACKEND-DEPLOY.onrender.com/api/galeria')
+  fetch('https://ceeaa-backend.onrender.com/api/galeria')
     .then(response => response.json())
     .then(imagenes => {
       galeriaContainer.innerHTML = "";
