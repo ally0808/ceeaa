@@ -84,7 +84,6 @@ app.listen(PORT, () => {
 });
 
 const Galeria = require('./models/Galeria'); // <--- NUEVO
-
 // --- NUEVA RUTA: Galería ---
 app.get('/api/galeria', async (req, res) => {
   try {
