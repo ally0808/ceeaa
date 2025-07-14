@@ -109,7 +109,7 @@ body {
 
 /* TÍTULO DE LA SECCIÓN DE COMITÉS */
 .objetivos-titulo-contenedores {
-  margin-top: 18px;
+  margin-top: 48px; /* Más espacio en escritorio */
   margin-bottom: 10px;
   text-align: center;
   color: #fff;
@@ -144,6 +144,10 @@ body {
   border-radius: 26px;
   box-shadow: none;
   position: relative;
+  .container {
+  margin-top: 64px; /* deja espacio para el navbar fijo */
+}
+
 }
 
 /* INTRODUCCIÓN */
@@ -357,4 +361,12 @@ footer {
 @media (max-width: 400px) {
   .container { padding: 5px 1vw; }
   .comite img { width: 98vw; height: 80px; }
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 }

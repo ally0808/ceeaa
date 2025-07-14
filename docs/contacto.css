@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   position: relative;
+  padding-top: 54px; /* igual a la altura del navbar-mini-container */
 }
 
 /* --------------------- NAVBAR --------------------- */
@@ -17,6 +18,11 @@ body {
 .navbar-bg {
   background: #143c7d;
   width: 100%;
+  position: fixed; /* fija el navbar en la parte superior */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 /* Contenedor del menú (con fondo más oscuro) */
@@ -397,4 +403,27 @@ footer {
 @media (max-width: 400px) {
   .contacto-card { padding: 0.4em 0.1em; }
   .footer-logos img { height: 28px; width: 56px; }
+}
+
+/* BOTÓN FLOTANTE PARA SUBIR ARRIBA */
+#btn-subir {
+  display: none;
+  position: fixed;
+  bottom: 35px;
+  right: 36px;
+  z-index: 100;
+  background: #143c7d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 46px; height: 46px;
+  box-shadow: 0 4px 16px #143c7d33;
+  font-size: 2em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+#btn-subir:hover {
+  background: #4ad1ff;
+  color: #143c7d;
+  transform: scale(1.12);
 }

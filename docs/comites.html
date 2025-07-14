@@ -20,7 +20,7 @@
 <body>
 
   <!-- NAVBAR: Menú superior que aparece en todas las vistas -->
-  <nav class="navbar-bg">
+  <nav class="navbar-bg fixed-nav">
     <div class="navbar-mini-container">
       <!-- Botón hamburguesa (solo visible en móviles) -->
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
@@ -85,7 +85,16 @@
   </footer>
 
   <!-- SCRIPT PARA EL MENÚ RESPONSIVE -->
-  <script src="menu.js"></script>
+  <script>
+  // Código para menú hamburguesa sin usar menu.js
+  const menuToggle = document.getElementById('menuToggle');
+  const navList = document.getElementById('navbarList');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('open');
+    navList.classList.toggle('open');
+  });
+</script>
 
   <!-- SCRIPT PARA CARGAR LOS COMITÉS DESDE LA BASE DE DATOS -->
   <script src="comites.js"></script>

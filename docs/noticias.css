@@ -130,7 +130,7 @@ body {
 
 /* Título principal (igual que en objetivos y comités) */
 .objetivos-titulo-contenedores {
-  margin-top: 18px;
+  margin-top: 100px !important; /* Mucho espacio arriba para escritorio */
   margin-bottom: 10px;
   text-align: center;
   color: #f8fbff;
@@ -142,19 +142,20 @@ body {
   text-shadow: 0 2px 16px #2567b0bb, 0 1px 0 #fff;
 }
 
-/* Título responsive */
 @media (max-width: 700px) {
   .objetivos-titulo-contenedores {
-    font-size: 2.4em;
-    margin-top: 14px;
+    margin-top: 80px !important; /* Más espacio en móvil/tablet */
     margin-bottom: 8px;
+    font-size: 2.4em;
   }
 }
+
 @media (max-width: 400px) {
   .objetivos-titulo-contenedores {
     font-size: 1.55em;
   }
 }
+
 
 /* CONTENEDOR DE NOTICIAS */
 main {
@@ -435,3 +436,12 @@ footer {
   }
   .footer-logos img { height: 18px; width: 36px; max-width: 46vw; }
 }
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+

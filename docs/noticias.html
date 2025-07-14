@@ -22,7 +22,7 @@
 <body>
 
   <!-- NAVBAR (barra de navegación) -->
-  <nav class="navbar-bg">
+  <nav class="navbar-bg fixed-nav">
     <div class="navbar-mini-container">
       
       <!-- Botón del menú hamburguesa para móviles -->
@@ -77,7 +77,16 @@
   </footer>
 
   <!-- SCRIPT DEL MENÚ (para abrir/cerrar en móvil) -->
-  <script src="menu.js"></script>
+  <script>
+  // Código para menú hamburguesa sin usar menu.js
+  const menuToggle = document.getElementById('menuToggle');
+  const navList = document.getElementById('navbarList');
+
+  menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('open');
+    navList.classList.toggle('open');
+  });
+</script>
 
   <!-- SCRIPT PARA CARGAR LAS NOTICIAS DESDE EL BACKEND -->
   <script>

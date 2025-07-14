@@ -8,12 +8,18 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
 }
 
 /* NAVBAR (barra de navegación superior) */
 .navbar-bg {
   background: #143c7d;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .navbar-mini-container {
@@ -337,7 +343,13 @@ footer { width: 100%; }
 
 /* MEDIA QUERIES (responsive) */
 @media (max-width: 900px) {
-  .galeria-section { max-width: 98vw; padding: 1.3em 0.2em 1.2em; }
+  .galeria-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent;
+  padding: 70px 18px 60px 18px; /* más arriba que antes */
+}
   .footer-logos img { height: 54px; width: 108px; }
   .galeria-tarjetas { gap: 18px; }
 }
@@ -353,3 +365,16 @@ footer { width: 100%; }
 @media (max-width: 400px) {
   .footer-logos img { height: 28px; width: 56px; }
 }
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.container {
+  margin-top: 64px; /* deja espacio para el navbar fijo */
+}
+
