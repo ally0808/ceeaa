@@ -251,14 +251,15 @@ body {
 
 /* DESCRIPCIÓN del hero */
 .hero-desc {
-  font-size: 1.15rem;
-  font-weight: 300;
-  line-height: 1.5;
+  font-size: 1.0rem; /* antes 1.15rem */
+  font-weight: 400;  /* antes 300 */
+  line-height: 1.6;
   margin: 25px 0 0;
-  color: #eaf6ff;
+  color: #ffffff;
   text-align: center;
   max-width: 570px;
   width: 100%;
+  text-shadow: 0 2px 4px rgba(10, 44, 98, 0.4); /* Mejora visibilidad */
 }
 
 /* BOTONES del hero */
@@ -390,6 +391,12 @@ footer {
 
 @media (max-width: 400px) {
   .footer-logos img { height: 40px; width: 80px; }
+}
+
+@media (max-width: 200px) {
+  .hero-desc {
+    font-size: 1.1rem;
+  }
 }
 
 .fixed-nav {
